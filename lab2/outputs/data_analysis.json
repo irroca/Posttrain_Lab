@@ -1,0 +1,59 @@
+{
+  "dataset_info": {
+    "source": "m-a-p/COIG-CQIA / zhihu",
+    "total_raw": 5631,
+    "columns": [
+      "instruction",
+      "input",
+      "output",
+      "task_type",
+      "domain",
+      "metadata",
+      "answer_from",
+      "human_verified",
+      "copyright",
+      "messages",
+      "user_tokens",
+      "assistant_tokens"
+    ]
+  },
+  "token_stats": {
+    "user_tokens": {
+      "mean": 51.15698810158054,
+      "median": 26.0,
+      "p5": 7.0,
+      "p95": 170.0,
+      "min": 4,
+      "max": 843
+    },
+    "assistant_tokens": {
+      "mean": 469.5769845498135,
+      "median": 379.0,
+      "p5": 207.0,
+      "p95": 1050.0,
+      "min": 70,
+      "max": 3009
+    }
+  },
+  "quality_control": {
+    "原始数据量": 5631,
+    "去重后": 5463,
+    "去重去除": 168,
+    "长度过滤后": 5434,
+    "长度过滤去除": 29,
+    "格式过滤后": 5434,
+    "格式过滤去除": 0,
+    "最终数据量": 5434,
+    "总去除比例": "3.5%"
+  },
+  "split_info": {
+    "train": 4347,
+    "val": 543,
+    "test": 544
+  },
+  "ablation_data_sizes": {
+    "raw": 4504,
+    "dedup": 4370,
+    "clean": 4347
+  }
+}

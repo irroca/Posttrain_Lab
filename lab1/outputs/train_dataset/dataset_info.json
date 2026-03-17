@@ -1,0 +1,59 @@
+{
+  "builder_name": "json",
+  "citation": "",
+  "config_name": "default",
+  "dataset_name": "alpaca_gpt4_zh",
+  "dataset_size": 25314509,
+  "description": "",
+  "download_checksums": {
+    "hf://datasets/llamafactory/alpaca_gpt4_zh@065394ee242c43928298de8f43a8748ffd16f3e3/alpaca_gpt4_data_zh.json": {
+      "num_bytes": 27862380,
+      "checksum": null
+    }
+  },
+  "download_size": 27862380,
+  "features": {
+    "instruction": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "input": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "output": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "messages": {
+      "feature": {
+        "content": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "role": {
+          "dtype": "string",
+          "_type": "Value"
+        }
+      },
+      "_type": "List"
+    }
+  },
+  "homepage": "",
+  "license": "",
+  "size_in_bytes": 53176889,
+  "splits": {
+    "train": {
+      "name": "train",
+      "num_bytes": 25314509,
+      "num_examples": 42677,
+      "dataset_name": "alpaca_gpt4_zh"
+    }
+  },
+  "version": {
+    "version_str": "0.0.0",
+    "major": 0,
+    "minor": 0,
+    "patch": 0
+  }
+}

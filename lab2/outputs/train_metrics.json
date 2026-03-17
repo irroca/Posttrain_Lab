@@ -1,0 +1,8 @@
+{
+  "train_loss_final": 3.1025974273681642,
+  "eval_loss_final": 3.0182125568389893,
+  "eval_loss_best": 3.0182125568389893,
+  "total_steps": 540,
+  "train_runtime": 1430.94,
+  "train_samples_per_second": 6.076
+}

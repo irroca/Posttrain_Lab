@@ -1,0 +1,333 @@
+{
+  "ablation_type": "数据质量消融",
+  "conditions": {
+    "raw (无QC)": {
+      "data_size": 3000,
+      "train_loss_final": 2.9667678833007813,
+      "eval_loss_best": 2.971072196960449,
+      "avg_judge_score": 2.066666666666667
+    },
+    "dedup (仅去重)": {
+      "data_size": 3000,
+      "train_loss_final": 2.879916763305664,
+      "eval_loss_best": 2.9709579944610596,
+      "avg_judge_score": 2.4
+    },
+    "clean (完整QC)": {
+      "data_size": 3000,
+      "train_loss_final": 2.910802459716797,
+      "eval_loss_best": 2.973564624786377,
+      "avg_judge_score": 2.9285714285714284
+    }
+  },
+  "category_scores": {
+    "raw (无QC)": {
+      "指令跟随": 1.5,
+      "知识问答": 2.5,
+      "数学推理": 1.0,
+      "创意写作": 1.5,
+      "代码生成": 3.5,
+      "中文理解": 2.0,
+      "格式化输出": 3.0,
+      "翻译": 1.0
+    },
+    "dedup (仅去重)": {
+      "指令跟随": 3.0,
+      "知识问答": 6.5,
+      "数学推理": 1.5,
+      "创意写作": 2.0,
+      "代码生成": 2.5,
+      "中文理解": 1.0,
+      "格式化输出": 1.0,
+      "翻译": 1.0
+    },
+    "clean (完整QC)": {
+      "指令跟随": 1.0,
+      "知识问答": 6.5,
+      "数学推理": 4.0,
+      "创意写作": 1.5,
+      "代码生成": 1.5,
+      "中文理解": 4.5,
+      "格式化输出": 2.0,
+      "翻译": 1.0
+    }
+  },
+  "eval_details": {
+    "raw (无QC)": [
+      {
+        "prompt": "用三个要点总结深度学习的核心概念",
+        "category": "指令跟随",
+        "answer": "呼和浩特科技大学硕士研究生，机器学习算法工程师。深度学习领域深耕多年，熟悉卷积神经网络、循环神经网络、深度强化学习、生成对抗网络、序列到序列模型、迁移学习、自然语言处理、强化学习、目标检测、图像分类、图像分割等机器学习算法。参与了多家公司的深度学习产品，例如：微信小程序、微信视频号、今日头条、美团外卖、京东、大众点评、滴滴、滴滴顺风车、京东商城、支付宝、美团外卖、滴滴顺风车、京东商城、大众点评、滴滴、滴滴顺风车、京东、大众点评、美团外卖、京东、美团外卖、滴滴、滴滴顺风车、京东、大众点评、美团外卖、滴滴、滴滴顺风车、京东、大众点评、美团外卖、滴滴、滴滴顺风车、京东、大众点评、美团外卖、滴滴、滴滴顺风车、京东、大众点评、美团外卖、滴滴、滴滴顺风车、京东、大众点评、美团外卖、滴滴、滴滴顺风车、京东、大众点评、美团外卖、滴滴、滴滴顺风车、京东、大众点评、美团外卖、滴滴、滴滴顺风车、京东、大众点评、美团外卖、滴滴、滴滴顺风车、京东、大众点评、美团外卖、滴滴、滴滴顺风车、京东、大众点评、美团外卖、滴滴、滴滴顺风车、京东、大众点评、美团外卖、滴滴、滴滴顺风车、京东、大众点评、美团外卖、滴滴、滴滴顺风车、京东、大众点评、美团外卖、滴滴、滴滴顺风车、京东、大众点评、美团外卖、滴滴、滴滴顺风车、京东、大众点评、美团外卖、滴滴、滴滴顺风车、京东、大众点评、美团外卖、滴滴、滴滴顺风车、京东、大众点评、美团外卖、滴滴、滴滴顺风车、京东、大众点评、美团外卖、滴滴、滴滴顺风车、京东、大众点评、美团外卖、滴滴、滴滴顺风车、京东、大众点评、美团外卖、滴滴、滴滴顺风车、京东、大众点评、美团外卖、滴滴、滴滴顺风车、京东、大众点评、美团外卖、滴滴、滴滴顺风车、京东、大众点评、美团外卖、滴滴、滴滴顺风车、京东、大众点评、美团外卖、滴滴、滴滴顺风车、京东、大众点评、美团外卖、滴滴",
+        "score": 1
+      },
+      {
+        "prompt": "请以 JSON 格式列出三种常见的数据结构及其特点",
+        "category": "指令跟随",
+        "answer": "三大职业：栈，队列，哈希表三种职业的用途：栈，队列，哈希表栈：可以看作是一种特殊的线性表，其特点是后进先出。可以将栈比作一个盒子，你放入一个物品，然后拿走，就相当于盒子里面的物品都是从顶部拿走，栈的使用场景：递归算法、栈的使用场景：递归算法、栈的使用场景：递归算法队列：可以看作是一种特殊的线性表，其特点是先进先出。可以将队列比作一个长长的队列，你进入一个物品，然后拿走，就相当于盒子里面的物品都是从底部拿走，队列的使用场景：缓冲区、队列的使用场景：缓冲区、队列的使用场景：缓冲区哈希表：可以看作是一种特殊的线性表，其特点是插入和查找的速度非常快。可以将哈希表比作一个非常大的字典，你想要查找一个单词，只需要知道它的字母顺序，就可以快速查找，哈希表的使用场景：数据库、哈希表的使用场景：数据库、哈希表的使用场景：数据库栈：可以看作是一种特殊的线性表，其特点是后进先出。可以将栈比作一个盒子，你放入一个物品，然后拿走，就相当于盒子里面的物品都是从顶部拿走，栈的使用场景：递归算法、栈的使用场景：递归算法、栈的使用场景：递归算法队列：可以看作是一种特殊的线性表，其特点是先进先出。可以将队列比作一个长长的队列，你进入一个物品，然后拿走，就相当于盒子里面的物品都是从底部拿走，队列的使用场景：缓冲区、队列的使用场景：缓冲区、队列的使用场景：缓冲区哈希表：可以看作是一种特殊的线性表，其特点是插入和查找的速度非常快。可以将哈希表比作一个非常大的字典，你想要查找一个单词，只需要知道它的字母顺序，就可以快速查找，哈希表的使用场景：数据库、哈希表的使用场景：数据库、哈希表的使用场景：数据库栈：可以看作是一种特殊的线性表，其特点是后进先出。可以将栈比作一个盒子，你放入一个物品，然后拿走，就相当于盒子里面的物品都是从",
+        "score": 2
+      },
+      {
+        "prompt": "解释什么是 Transformer 架构，以及它为什么重要",
+        "category": "知识问答",
+        "answer": "NdrFcShort\n\n_TRANSFORMER_是目前最流行的模型架构，其在自然语言处理领域取得了巨大成功。它的核心思想是利用注意力机制来学习输入序列中不同元素之间的关系，从而更好地理解上下文信息。具体来说，_TRANSFORMER_将输入序列分成多个子序列，每个子序列都与一个固定长度的掩码相关联。然后，模型通过一个多头注意力机制来计算每个子序列与其他子序列之间的关系，并将其作为输出。最后，模型将所有子序列的输出拼接在一起，得到最终的输出。_TRANSFORMER_的关键特点是它可以处理任意长度的输入序列，并且能够捕捉到输入序列中的长距离依赖关系。这种能力使得_TRANSFORMER_在自然语言处理任务中取得了比传统的循环神经网络和卷积神经网络更好的性能。此外，_TRANSFORMER_还具有自注意力机制，可以更好地处理输入序列中的噪声和干扰。因此，_TRANSFORMER_在自然语言处理领域取得了巨大的成功，被广泛应用于文本分类、机器翻译、问答系统等领域。然而，_TRANSFORMER_也有一些缺点，例如计算复杂度较高，需要大量的计算资源。因此，研究人员也在探索如何改进_TRANSFORMER_的性能和效率。总的来说，_TRANSFORMER_是自然语言处理领域的一个重要模型架构，它具有强大的能力，可以更好地处理自然语言数据。在未来，_TRANSFORMER_可能会继续发挥重要作用，推动自然语言处理技术的发展。_transformer_ 是一种基于注意力机制的深度学习模型架构，最初由 Google 的 DeepMind 团队在 2017 年提出，并在自然语言处理任务中取得了巨大的成功。与传统的循环神经网络（RNN）和卷积神经网络（CNN）相比，_TRANSFORMER_具有以下优势：\n\n1. 位置编码：_TRANSFORMER_采用了一种称为位置编码的方法，将输入序列的每个元素的位置信息编码到模型中。这种方法可以更好地捕捉输入序列中不同元素之间的关系，从而提高模型的性能。\n\n2. 多头注意力机制：_TRANSFORMER_采用了多头注意力机制，该机制可以同时关注输入序列中多个不同的元素，从而更好地捕捉输入序列中的长距离依赖关系。\n\n3. 自注意力机制：_TRANSFORMER_采用了自注意力机制，该机制可以更好地处理输入序列中的噪声和干扰，从而提高模型的鲁棒性。\n\n4.",
+        "score": 4
+      },
+      {
+        "prompt": "比较 TCP 和 UDP 协议的区别",
+        "category": "知识问答",
+        "answer": "NdrFcShort\n\nطريقة ارسال البيانات\n\nيتم ارسال البيانات من طرف المضيف المصدر الى طرف المضيف الوجهة.\n\nالمضيف المصدر يرسل البيانات الى طرف الوجهة باستخدام طريقة ارسال البيانات المحددة في التحويل.\n\nالمضيف الوجهة يقوم بتحليل البيانات وتحديد ما اذا كانت البيانات تحتاج الى تشفير او لا.\n\nالمضيف الوجهة يقوم بتحليل البيانات وتحديد ما اذا كانت البيانات تحتاج الى تشفير او لا.\n\nالمضيف الوجهة يقوم بتحليل البيانات وتحديد ما اذا كانت البيانات تحتاج الى تشفير او لا.\n\nالمضيف الوجهة يقوم بتحليل البيانات وتحديد ما اذا كانت البيانات تحتاج الى تشفير او لا.\n\nالمضيف الوجهة يقوم بتحليل البيانات وتحديد ما اذا كانت البيانات تحتاج الى تشفير او لا.\n\nالمضيف الوجهة يقوم بتحليل البيانات وتحديد ما اذا كانت البيانات تحتاج الى تشفير او لا.\n\nالمضيف الوجهة يقوم بتحليل البيانات وتحديد ما اذا كانت البيانات تحتاج الى تشفير او لا.\n\nالمضيف الوجهة يقوم بتحليل البيانات وتحديد ما اذا كانت البيانات تحتاج الى تشفير او لا.\n\nالمضيف الوجهة يقوم بتحليل البيانات وتحديد ما اذا كانت البيانات تحتاج الى تشفير او لا.\n\nالمضيف الوجهة يقوم بتحليل البيانات وتحديد ما اذا كانت البيانات تحتاج الى تشفير او لا.\n\nالمضيف الوجهة يقوم بتحليل البيانات وتحديد ما اذا كانت البيانات تحتاج الى تشفير او لا.\n\nالمضيف الوجهة يقوم بتحليل البيانات وتحديد ما اذا كانت البيانات تحتاج الى تشفير او لا.\n\nالمضيف الوجهة يقوم بتحليل البيانات وتحديد ما اذا كانت البيانات تحتاج الى تشفير او لا.\n\nالمضيف الوجهة يقوم بتحليل البيانات وتحديد ما اذا كانت البيانات تحتاج الى تشفير او لا.\n\nالمضيف الوجهة يقوم بتحليل البيانات وتحديد ما اذا كانت البيانات تحتاج الى تشفير او لا.\n\nالمضيف الوجهة يقوم بتحليل البيانات وتحديد ما اذا كانت البيانات تحتاج الى تشفير او لا.\n\nالمضيف الوجهة يقوم بتحليل البيانات وتحديد ما اذا كانت البيانات تحتاج الى تشفير او لا.\n\nالمضيف الوجهة يقوم بتحليل البيانات وتحديد ما اذا كانت البيانات تحتاج الى تشفير او لا.\n\nالمضيف الوجهة يقوم بتحليل البيانات وتحديد ما اذا كانت البيانات تحتاج الى تشفير او لا.\n\nالمضيف الوجهة يقوم بتحليل البيانات وتحديد ما اذا كانت البيانات تحتاج",
+        "score": 1
+      },
+      {
+        "prompt": "一个班有 45 名学生，男生比女生多 5 人。男生和女生各有多少人？",
+        "category": "数学推理",
+        "answer": "易错点：（1）没有看清题目，男生人数比女生人数多 5 人，男生人数比女生人数多 5 个，而不是 5 人。 (2)没有看清题目，男生人数比女生人数多 5 个，男生人数比女生人数多 5 人，而不是 5 个。 (3)没有看清题目，男生人数比女生人数多 5 个，男生人数比女生人数多 5 人，而不是 5 个。 (4)没有看清题目，男生人数比女生人数多 5 个，男生人数比女生人数多 5 人，而不是 5 个。 (5)没有看清题目，男生人数比女生人数多 5 个，男生人数比女生人数多 5 人，而不是 5 个。 (6)没有看清题目，男生人数比女生人数多 5 个，男生人数比女生人数多 5 人，而不是 5 个。 (7)没有看清题目，男生人数比女生人数多 5 个，男生人数比女生人数多 5 人，而不是 5 个。 (8)没有看清题目，男生人数比女生人数多 5 个，男生人数比女生人数多 5 人，而不是 5 个。 (9)没有看清题目，男生人数比女生人数多 5 个，男生人数比女生人数多 5 人，而不是 5 个。 (10)没有看清题目，男生人数比女生人数多 5 个，男生人数比女生人数多 5 人，而不是 5 个。 (11)没有看清题目，男生人数比女生人数多 5 个，男生人数比女生人数多 5 人，而不是 5 个。 (12)没有看清题目，男生人数比女生人数多 5 个，男生人数比女生人数多 5 人，而不是 5 个。 (13)没有看清题目，男生人数比女生人数多 5 个，男生人数比女生人数多 5 人，而不是 5 个。 (14)没有看清题目，男生人数比女生人数多 5 个，男生人数比女生人数多 5 人，而不是 5 个。 (15)没有看清题目，男生人数比女生人数",
+        "score": 1
+      },
+      {
+        "prompt": "一个矩形的长是宽的2倍，周长是36厘米，求面积",
+        "category": "数学推理",
+        "answer": "格網站\n\n��安市，一个24岁的女孩，在上班途中不幸坠楼身亡。死者是西安某公司的员工，24岁，单身，未婚。24日，她的家人发布讣告称，因意外坠楼身亡，已办理完相关手续。家属要求对死者进行尸检，但警方以“暂不尸检”为由拒绝了家属的要求。家属表示，将对公安部门的这一做法提出申诉。家属表示，死者生前是西安某公司的员工，从事的是销售工作。事发当天，死者在公司楼下乘电梯上下班途中，因操作失误，导致电梯突然下坠，坠楼身亡。家属表示，事发当天，死者是下午1点左右下楼，1点50分左右电梯突然下坠，坠楼身亡。家属表示，死者生前一直与公司保持良好的关系，平时表现也很好，没有出现过任何问题。家属表示，死者生前一直与公司保持良好的关系，平时表现也很好，没有出现过任何问题。家属表示，死者生前一直与公司保持良好的关系，平时表现也很好，没有出现过任何问题。家属表示，死者生前一直与公司保持良好的关系，平时表现也很好，没有出现过任何问题。家属表示，死者生前一直与公司保持良好的关系，平时表现也很好，没有出现过任何问题。家属表示，死者生前一直与公司保持良好的关系，平时表现也很好，没有出现过任何问题。家属表示，死者生前一直与公司保持良好的关系，平时表现也很好，没有出现过任何问题。家属表示，死者生前一直与公司保持良好的关系，平时表现也很好，没有出现过任何问题。家属表示，死者生前一直与公司保持良好的关系，平时表现也很好，没有出现过任何问题。家属表示，死者生前一直与公司保持良好的关系，平时表现也很好，没有出现过任何问题。家属表示，死者生前一直与公司保持良好的关系，平时表现也很好，没有出现过任何问题。家属表示，死者生前一直与公司保持良好的关系，平时表现也很好，没有出现过任何问题。家属表示，死者生前一直与公司保持良好的关系，平时表现也很好，没有出现过任何问题。家属表示，死者生前一直与公司保持良好的关系，平时表现也很好，没有出现过任何问题。家属表示，死者生前一直与",
+        "score": 1
+      },
+      {
+        "prompt": "写一段关于人工智能未来的短文（100字左右）",
+        "category": "创意写作",
+        "answer": "confidence\n\n未来的社会，AI会是人类的副手。AI会处理大部分的琐事，而人类则去思考更深层次的问题。未来的社会，人类会更多地利用AI的能力，而AI则更多地处理琐事，去思考更深层次的问题。未来的社会，AI会是人类的副手。未来的社会，AI会处理大部分的琐事，而人类则去思考更深层次的问题。未来的社会，人类会更多地利用AI的能力，而AI则更多地处理琐事，去思考更深层次的问题。未来的社会，AI会是人类的副手。未来的社会，AI会处理大部分的琐事，而人类则去思考更深层次的问题。未来的社会，人类会更多地利用AI的能力，而AI则更多地处理琐事，去思考更深层次的问题。未来的社会，AI会是人类的副手。未来的社会，AI会处理大部分的琐事，而人类则去思考更深层次的问题。未来的社会，人类会更多地利用AI的能力，而AI则更多地处理琐事，去思考更深层次的问题。未来的社会，AI会是人类的副手。未来的社会，AI会处理大部分的琐事，而人类则去思考更深层次的问题。未来的社会，人类会更多地利用AI的能力，而AI则更多地处理琐事，去思考更深层次的问题。未来的社会，AI会是人类的副手。未来的社会，AI会处理大部分的琐事，而人类则去思考更深层次的问题。未来的社会，人类会更多地利用AI的能力，而AI则更多地处理琐事，去思考更深层次的问题。未来的社会，AI会是人类的副手。未来的社会，AI会处理大部分的琐事，而人类则去思考更深层次的问题。未来的社会，人类会更多地利用AI的能力，而AI则更多地处理琐事，去思考更深层次的问题。未来的社会，AI会是人类的副手。未来的社会，AI会处理大部分的琐事，而人类则去思考更深层次的问题。未来的社会，人类会更多地利用AI的能力，而AI则更多地处理琐事，去思考更深层次的问题。未来的社会，AI会是人类的副手。未来的社会，AI会处理大部分的琐事，而人类则去思考更深层次的问题。未来的社会，人类会更多地利用AI的能力，而AI则更多地处理琐事，去思考更深层次的问题。",
+        "score": 2
+      },
+      {
+        "prompt": "写一首关于春天的五言绝句",
+        "category": "创意写作",
+        "answer": "呼和浩特的春天，是一场盛大的婚礼，是浪漫的婚礼，是梦幻的婚礼，是热烈的婚礼，是欢快的婚礼，是幸福的婚礼，是开心的婚礼，是喜悦的婚礼，是温馨的婚礼，是美丽的婚礼，是热闹的婚礼，是热闹的婚礼，是热闹的婚礼，是热闹的婚礼，是热闹的婚礼，是热闹的婚礼，是热闹的婚礼，是热闹的婚礼，是热闹的婚礼，是热闹的婚礼，是热闹的婚礼，是热闹的婚礼，是热闹的婚礼，是热闹的婚礼，是热闹的婚礼，是热闹的婚礼，是热闹的婚礼，是热闹的婚礼，是热闹的婚礼，是热闹的婚礼，是热闹的婚礼，是热闹的婚礼，是热闹的婚礼，是热闹的婚礼，是热闹的婚礼，是热闹的婚礼，是热闹的婚礼，是热闹的婚礼，是热闹的婚礼，是热闹的婚礼，是热闹的婚礼，是热闹的婚礼，是热闹的婚礼，是热闹的婚礼，是热闹的婚礼，是热闹的婚礼，是热闹的婚礼，是热闹的婚礼，是热闹的婚礼，是热闹的婚礼，是热闹的婚礼，是热闹的婚礼，是热闹的婚礼，是热闹的婚礼，是热闹的婚礼，是热闹的婚礼，是热闹的婚礼，是热闹的婚礼，是热闹的婚礼，是热闹的婚礼，是热闹的婚礼，是热闹的婚礼，是热闹的婚礼，是热闹的婚礼，是热闹的婚礼，是热闹的婚礼，是热闹的婚礼，是热闹的婚礼，是热闹的婚礼，是热闹的婚礼，是热闹的婚礼，是热闹的婚礼，是热闹的婚礼，是热闹的婚礼，是热闹的婚礼，是热闹的婚礼，是热闹的婚礼，是热闹的婚礼，是热闹的婚礼，是热闹的婚礼，是热闹的婚礼，是热闹的婚礼，是热闹的婚礼，是热闹的婚礼，是热闹的婚礼，是热闹的婚礼，是热闹的婚礼，是热闹的婚礼，是热闹的婚礼，是热闹的婚礼，是热闹的婚礼，是热闹的婚礼，是热闹的婚礼，是热闹的婚礼，是热闹的婚礼，是热闹的婚礼，是热闹的婚礼，是热闹的婚礼，是热闹的婚礼，是热闹的婚礼，是热闹的婚礼，是热闹",
+        "score": 1
+      },
+      {
+        "prompt": "用 Python 实现一个简单的栈（Stack）数据结构",
+        "category": "代码生成",
+        "answer": "𓃰\n\n简单地说，栈是一个遵循后进先出（LIFO）原则的列表。这意味着你只能在列表的末端插入和移除元素，而不是在中间或开头。\n\n在 Python 中，你可以使用列表来实现一个简单的栈。列表是 Python 的内置数据结构，它们允许你存储和访问任何类型的对象，包括整数、字符串和列表等。\n\n以下是一个简单的栈实现示例：\n\n```python\nclass Stack:\n    def __init__(self):\n        self.items = []\n\n    def is_empty(self):\n        return self.items == []\n\n    def push(self, item):\n        self.items.append(item)\n\n    def pop(self):\n        return self.items.pop()\n\n    def peek(self):\n        return self.items[len(self.items) - 1]\n\n    def size(self):\n        return len(self.items)\n```\n\n这个实现使用了一个名为 `items` 的空列表来存储栈中的元素。`push` 方法将元素添加到列表的末端，`pop` 方法将列表的最后一个元素移除并返回，`peek` 方法返回列表的最后一个元素但不移除它，`size` 方法返回列表的长度。\n\n你可以使用这个类来创建一个栈对象，并使用它的方法来操作栈。例如：\n\n```python\ns = Stack()\ns.push(5)\ns.push(10)\ns.push(15)\nprint(s.pop())  # 输出 15\nprint(s.peek())  # 输出 10\nprint(s.size())  # 输出 2\n```\n\n这个示例创建了一个名为 `s` 的栈对象，并使用它的方法来添加和移除元素。最後，它打印出栈的大小、顶部元素和最底部元素。\n\n希望这可以帮助你理解如何使用 Python 实现一个简单的栈数据结构。如果需要更复杂的实现或更高级的栈操作，可以使用 Python 的标准库或第三方库，例如 `collections.deque` 或 `queue.LifoQueue`。此外，Python 还提供了一些更高级的数据结构，如堆栈、队列和双端队列，它们可以用于更复杂的任务。\n\nisé\n保驾护\n辅助\n助\n相關服務\n相關服務\n相關服務\n相關服務\n相關服務\n相關服務\n相關服務\n相關服務\n相關服務\n相關服務\n相關服務\n相關服務\n相關服務\n相關服務\n相關服務\n相關服務\n相關服務\n相關服務\n相關服務\n相關服務\n相關服務\n相關服務\n相關服務\n相關服務\n相關服務\n相關服務\n相關服務\n相關服務\n相關服務\n相關服務\n相關服務\n相關服務\n相關服務\n相關服務",
+        "score": 6
+      },
+      {
+        "prompt": "用 Python 写一个函数，判断一个字符串是否为回文",
+        "category": "代码生成",
+        "answer": "呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特\n\n呼和浩特",
+        "score": 1
+      },
+      {
+        "prompt": "解释成语'画蛇添足'的含义，并举一个现代生活中的例子",
+        "category": "中文理解",
+        "answer": "دمشの士\n\n「画蛇添足」这个成语，出自《战国策·齐策二》：“楚有祠者，赐其舍人卮酒。舍人相谓曰：‘数人饮之不足，一人饮之有余；请画地为蛇，先成者饮酒。’一人蛇先成，引酒且饮之，乃左手持卮，右手画蛇，曰：‘吾能为之足。’未成，一人之蛇成，夺其卮曰：‘蛇固无足，子安能为之足？’遂饮其酒。为蛇足者，终亡其酒。”意思是说，有人给楚国的祠庙祝寿，把酒赐给门客们。门客们互相说：“几个人喝一点酒还不够，就由一个人来喝吧。请在地上画一条蛇，谁先画成谁就喝。”结果，一个人先画好了，拿起酒杯准备要喝酒，突然发现左手拿的酒杯里没有酒，于是又去画蛇，说：“我还能给蛇画上脚呢。”可是，蛇还没有画好，另一个门客已经画好了，夺过他的酒杯说：“蛇本来就没有脚，你凭什么给它画脚呢？”最终，那个画蛇的人，连酒也喝不到了。这个故事的意思是：本末倒置，多此一举。这则成语的寓意，就是提醒人们做事不要本末倒置，不要多此一举。这则成语的寓意，就是提醒人们做事不要本末倒置，不要多此一举。现代生活中的例子：小张同学在学习上很用功，他认真地在复习考试之前，每天学习的时间都超过了10个小时，最后他考上了理想的大学。而小李同学呢，学习时间却不足10个小时，复习得也并不怎么样，结果呢，最后考上了普通学校。由此可见，小张同学的做法是正确的，而小李同学的做法是错误的。小张同学的做法是正确的，而小李同学的做法是错误的。مستشف\nمستشف\n دمشの士\n\n「画蛇添足」这个成语，出自《战国策·齐策二》：“楚有祠者，赐其舍人卮酒。舍人相谓曰：‘数人饮之不足，一人饮之有余；请画地为蛇，先成者饮酒。’一人蛇先成",
+        "score": 2
+      },
+      {
+        "prompt": "解释'塞翁失马'这个成语的含义",
+        "category": "中文理解",
+        "answer": "𬉼\n\n دمش的骆驼失了，但得到的却是好马。塞翁因为失了马，但得到的是好马，所以塞翁说塞外的人说，失马，丢了马，就是好事，得到好马，就是坏事。這句話的本意是說明凡事都要用發展的眼光來看，不能只看眼前。在現實生活中，我們要學會用發展的眼光來看問題，不能只看眼前，而忽略未來。如果只看眼前，而不考慮未來，那麼就會失去很多。如果只看未來，而不考慮眼前，那麼就會失去很多。如果只看眼前，而不考慮未來，那麼就會失去很多。如果只看未來，而不考慮眼前，那麼就會失去很多。如果只看眼前，而不考慮未來，那麼就會失去很多。如果只看未來，而不考慮眼前，那麼就會失去很多。如果只看未來，而不考慮眼前，那麼就會失去很多。如果只看未來，而不考慮眼前，那麼就會失去很多。如果只看未來，而不考慮眼前，那麼就會失去很多。如果只看未來，而不考慮眼前，那麼就會失去很多。如果只看未來，而不考慮眼前，那麼就會失去很多。如果只看未來，而不考慮眼前，那麼就會失去很多。如果只看未來，而不考慮眼前，那麼就會失去很多。如果只看未來，而不考慮眼前，那麼就會失去很多。如果只看未來，而不考慮眼前，那麼就會失去很多。如果只看未來，而不考慮眼前，那麼就會失去很多。如果只看未來，而不考慮眼前，那麼就會失去很多。如果只看未來，而不考慮眼前，那麼就會失去很多。如果只看未來，而不考慮眼前，那麼就會失去很多。如果只看未來，而不考慮眼前，那麼就會失去很多。如果只看未來，而不考慮眼前，那麼就會失去很多。如果只看未來，而不考慮眼前，那麼就會失去很多。如果只看未來，而不考慮眼前，那麼就會失去很多。如果只看未來，而不考慮眼前，那麼就會失去很多。如果只看未來，而不考慮眼前，那麼就會失去很多。如果只看未來，而不考慮眼前，那麼就會失去很多。如果只看未來，而不考慮眼前，那麼就會失去很多。如果只看未來，而不考慮眼前，那麼就會失去很多。如果只看未來，而不考慮眼前，那麼就會失去很多。如果只看未來，而不考慮",
+        "score": 2
+      },
+      {
+        "prompt": "用 Markdown 表格对比三种排序算法的时间和空间复杂度",
+        "category": "格式化输出",
+        "answer": "㋥\n\n几种常见的排序算法的时间复杂度和空间复杂度如下：\n\n| 排序算法 | 时间复杂度 | 空间复杂度 |\n| --- | --- | --- |\n| 冒泡排序 | O(n^2) | O(1) |\n| 选择排序 | O(n^2) | O(1) |\n| 插入排序 | O(n^2) | O(1) |\n| 希尔排序 | O(n^2) | O(1) |\n| 归并排序 | O(nlogn) | O(n) |\n| 快速排序 | O(nlogn) | O(logn) |\n| 堆排序 | O(nlogn) | O(1) |\n| 基数排序 | O(nk) | O(k) |\n| 计数排序 | O(n+k) | O(n+k) |\n\n其中，时间复杂度指的是算法的最坏情况、平均情况和最好情况的时间复杂度。空间复杂度指的是算法所需的额外空间大小。不同的排序算法在时间复杂度和空间复杂度上有所不同，选择合适的排序算法需要根据具体情况进行权衡。例如，如果需要对大规模数据进行排序，可以考虑使用归并排序或快速排序；如果需要对小规模数据进行排序，可以考虑使用插入排序或冒泡排序。此外，还可以根据具体应用场景选择合适的排序算法。例如，在需要对数据进行排序的情况下，可以考虑使用快速排序；在需要对数据进行查找和插入操作的情况下，可以考虑使用二分查找和链表排序等算法。总之，排序算法的选择需要根据具体情况进行权衡和选择。 rağ\nع\nد\nه\nم\nخ\nس\nو\nط\nض\nش\nط\nم\nع\nع\nي\nع\nك\nع\nخ\nم\nك\nع\nح\nع\nش\nع\nش\nع\nع\nع\nع\nع\nع\nع\nع\nع\nع\nع\nع\nع\nع\nع\nع\nع\nع\nع\nع\nع\nع\nع\nع\nع\nع\nع\nع\nع\nع\nع\nع\nع\nع\nع\nع\nع\nع\nع\nع\nع\nع\nع\nع\nع\nع\nع\nع\nع\nع\nع\nع\nع\nع",
+        "score": 5
+      },
+      {
+        "prompt": "用列表形式总结 LoRA 微调的主要步骤",
+        "category": "格式化输出",
+        "answer": "三大职业：1. 生成 2. 评估 3. 优化三种职业，分别对应着生成、评估和优化，这是 LoRA 微调的三部曲。三大职业对应着 LoRA 的三步曲：1. 生成（生成）2. 评估（评估）3. 优化（优化）三大职业对应着 LoRA 的三步曲：1. 生成（生成）2. 评估（评估）3. 优化（优化）三大职业对应着 LoRA 的三步曲：1. 生成（生成）2. 评估（评估）3. 优化（优化）三大职业对应着 LoRA 的三步曲：1. 生成（生成）2. 评估（评估）3. 优化（优化）三大职业对应着 LoRA 的三步曲：1. 生成（生成）2. 评估（评估）3. 优化（优化）三大职业对应着 LoRA 的三步曲：1. 生成（生成）2. 评估（评估）3. 优化（优化）三大职业对应着 LoRA 的三步曲：1. 生成（生成）2. 评估（评估）3. 优化（优化）三大职业对应着 LoRA 的三步曲：1. 生成（生成）2. 评估（评估）3. 优化（优化）三大职业对应着 LoRA 的三步曲：1. 生成（生成）2. 评估（评估）3. 优化（优化）三大职业对应着 LoRA 的三步曲：1. 生成（生成）2. 评估（评估）3. 优化（优化）三大职业对应着 LoRA 的三步曲：1. 生成（生成）2. 评估（评估）3. 优化（优化）三大职业对应着 LoRA 的三步曲：1. 生成（生成）2. 评估（评估）3. 优化（优化）三大职业对应着 LoRA 的三步曲：1. 生成（生成）2. 评估（评估）3. 优化（优化）三大职业对应着 LoRA 的三步曲：1. 生成（生成）2. 评估（评估）3. 优化（优化）三大职业对应着 LoRA 的三步曲：1. 生成（生成）2. 评估（评估）3. 优化（优化）三大职业对应着 LoRA 的三步曲",
+        "score": 1
+      },
+      {
+        "prompt": "将以下中文翻译成英文：'大语言模型的后训练是提升模型实用性的关键步骤'",
+        "category": "翻译",
+        "answer": "خِصَّةً، من وجهة نظري، هناك نوعان من \"التدريب\" في عالم المعرفة الحديث: التدريب المسبق وتدريباً بعدياً. التدريب المسبق هو محاولة \"اختيار\" معلومات وتعلمها، مثل دراستنا في المدرسة. بينما التدريب بعدي هو محاولة \"عمل\" معلومات وتعلمها، مثل تعلم القراءة. بعبارة أخرى، التدريب المسبق هو البحث والدراسة، بينما التدريب بعدي هو القراءة والكتابة. خلافاً لذلك، فإن التدريب المسبق يوفر الأساس للمعرفة، بينما التدريب بعدي يُبنى عليها. التدريب بعدي لا يُحدث أي تغييرات على المعرفة الموجودة، بل يُحسن فقط ترتيبها وتوصيلها. من وجهة نظري، التدريب بعدي هو التدريب المسبق الذي يُحسن ترتيب المعرفة وتوصيلها. لذا، لا أرى لماذا نُطلق على التدريب بعدي \"تدريب\" في الاسم. بالنسبة إلى التدريب المسبق، هناك نوعان: التدريب في المنزل والتدريب في المدرسة. في المنزل، يُسمى التدريب \"تدريس\"؛ في المدرسة، يُسمى التدريب \"تعليم\". التدريب في المدرسة هو التدريب الذي يُسمح للطلاب فيه بتدريسهم. بينما التدريب في المنزل هو التدريب الذي يُسمح للطلاب فيه بالتدريس. لكنني أرى أن التدريب في المدرسة هو التدريب المسبق الذي يُحسن ترتيب المعرفة وتوصيلها. بينما التدريب في المنزل هو التدريب بعدي يُحسن ترتيب المعرفة وتوصيلها. أما بالنسبة إلى التدريب بعدي، فهناك نوعان: التدريب في المدرسة والتدريب في المدرسة الثانوية. في المدرسة الثانوية، يُسمى التدريب \"تدريب\"؛ في المدرسة، يُسمى التدريب \"تدريب\". التدريب في المدرسة الثانوية هو التدريب الذي يُسمح للطلاب فيه بالتدريب. بينما الت",
+        "score": 1
+      }
+    ],
+    "dedup (仅去重)": [
+      {
+        "prompt": "用三个要点总结深度学习的核心概念",
+        "category": "指令跟随",
+        "answer": "confidence:\n 1. 需要了解机器学习和深度学习的基本概念，才能理解深度学习。机器学习是一门人工智能的分支，通过训练数据让机器学习和提高算法，从而达到预测和决策的目的。机器学习的算法可以分为监督学习、无监督学习和强化学习。深度学习是机器学习的一种，它使用人工神经网络来学习数据，以实现预测和决策。2. 深度学习是一种基于人工神经网络的机器学习方法，它使用多个隐藏层来学习数据。深度学习可以自动提取数据的特征，因此可以处理复杂的任务，如图像识别、语音识别、自然语言处理等。深度学习在计算机视觉、语音识别、自然语言处理、推荐系统、游戏AI等领域得到了广泛应用。3. 深度学习使用大量的数据来训练模型，以提高预测和决策的准确性。深度学习可以处理高维数据，如图像、音频、视频等，并且可以自动提取数据的特征，因此可以处理复杂的任务。深学习使用大量的数据来训练模型，以提高预测和决策的准确性。 deep learning, neural networks, artificial intelligence, machine learning, computer vision, natural language processing, image recognition, speech recognition, recommendation systems, game AI, supervised learning, unsupervised learning, reinforcement learning, convolutional neural networks, recurrent neural networks, long short-term memory networks, generative adversarial networks, autoencoders, variational autoencoders, generative adversarial networks, autoencoders, variational autoencoders, generative adversarial networks, autoencoders, variational autoencoders, generative adversarial networks, autoencoders, variational autoencoders, generative adversarial networks, autoencoders, variational autoencoders, generative adversarial networks, autoencoders, variational autoencoders, generative adversarial networks, autoencoders, variational autoencoders, generative adversarial networks, autoencoders, variational autoencoders, generative adversarial networks, autoencoders, variational autoencoders, generative adversarial networks, autoencoders, variational autoencoders, generative adversarial networks, autoencoders, variational autoencoders, generative adversarial networks, autoencoders, variational autoencoders, generative adversarial networks, autoencoders, variational autoencoders, generative adversarial networks, autoencoders, variational autoencoders, gener",
+        "score": 4
+      },
+      {
+        "prompt": "请以 JSON 格式列出三种常见的数据结构及其特点",
+        "category": "指令跟随",
+        "answer": "㋴\n\n常见数据结构：\n\n1. 数组：具有固定长度，元素顺序存储，元素类型相同，支持随机访问。\n\n2. 链表：长度可变，元素顺序存储，元素类型相同，支持随机访问，元素位置移动慢。\n\n3. 栈：后进先出，元素顺序存储，元素类型相同，支持随机访问。\n\n4. 队列：先进先出，元素顺序存储，元素类型相同，支持随机访问。\n\n5. 堆：具有固定长度，元素顺序存储，元素类型相同，支持随机访问。\n\n6. 集合：元素不重复，元素顺序存储，元素类型相同，支持随机访问。\n\n7. 数组：具有固定长度，元素顺序存储，元素类型相同，支持随机访问。\n\n8. 链表：长度可变，元素顺序存储，元素类型相同，支持随机访问，元素位置移动慢。\n\n9. 栈：后进先出，元素顺序存储，元素类型相同，支持随机访问。\n\n10. 队列：先进先出，元素顺序存储，元素类型相同，支持随机访问。\n\n11. 堆：具有固定长度，元素顺序存储，元素类型相同，支持随机访问。\n\n12. 集合：元素不重复，元素顺序存储，元素类型相同，支持随机访问。\n\n13. 数组：具有固定长度，元素顺序存储，元素类型相同，支持随机访问。\n\n14. 链表：长度可变，元素顺序存储，元素类型相同，支持随机访问，元素位置移动慢。\n\n15. 栈：后进先出，元素顺序存储，元素类型相同，支持随机访问。\n\n16. 队列：先进先出，元素顺序存储，元素类型相同，支持随机访问。\n\n17. 堆：具有固定长度，元素顺序存储，元素类型相同，支持随机访问。\n\n18. 集合：元素不重复，元素顺序存储，元素类型相同，支持随机访问。\n\n19. 数组：具有固定长度，元素顺序存储，元素类型相同，支持随机访问。\n\n20. 链表：长度可变，元素顺序存储，元素类型相同，支持随机访问，元素位置移动慢。\n\n21. 栈：后进先出，元素顺序存储，元素类型相同，支持随机访问。\n\n22. 队",
+        "score": 2
+      },
+      {
+        "prompt": "解释什么是 Transformer 架构，以及它为什么重要",
+        "category": "知识问答",
+        "answer": "دمش士，今天我来给大家介绍一下Transformer架构。在自然语言处理领域，Transformer架构的出现是语言模型领域的一次重大突破。它是一种基于自注意力机制的模型，可以更高效地处理序列数据，从而在自然语言处理任务中取得了更好的性能。\n\nTransformer架构的核心思想是自注意力机制。在传统的RNN或LSTM模型中，每个时间步都需要关注前一个时间步的信息，这会导致信息传递的延迟和冗余。而在自注意力机制中，每个时间步都可以关注所有其他时间步的信息，从而实现更高效的信息传递。具体来说，自注意力机制通过计算每个时间步与其他时间步之间的相似度，来决定每个时间步应该关注哪些信息，从而实现更高效的信息传递。\n\nTransformer架构的另一个重要特点是并行计算。在传统的RNN模型中，每个时间步都需要依次进行计算，这会导致计算速度较慢。而在Transformer架构中，每个时间步都可以并行计算，从而大大提高了计算速度。\n\nTransformer架构在自然语言处理任务中取得了很好的效果，如机器翻译、文本分类、问答系统等。它的成功在于其自注意力机制和并行计算的特点，这些特点使得Transformer架构能够更高效地处理序列数据，从而在自然语言处理任务中取得了更好的性能。\n\n总的来说，Transformer架构是一种基于自注意力机制的模型，可以更高效地处理序列数据，从而在自然语言处理任务中取得了更好的性能。它的成功在于其自注意力机制和并行计算的特点，这些特点使得Transformer架构能够更高效地处理序列数据，从而在自然语言处理任务中取得了更好的性能。 encouraging\n谢谢你的回答，我想进一步了解自注意力机制的工作原理。 العسك\n相關服務\n相關服務\n相關服務\n相關服務\n相關服務\n相關服務\n相關服務\n相關服務\n相關服務\n相關服務\n相關服務\n相關服務\n相關服務\n相關服務\n相關服務\n相關服務\n相關服務\n相關服務\n相關服務\n相關服務\n相關服務\n相關服務\n相關服務\n相關服務\n相關服務\n相關服務\n相關服務\n相關服務\n相關服務\n相關服務\n相關服務\n相關服務\n相關服務\n相關服務\n相關服務\n相關服務\n相關服務\n相關服務\n相關服務\n相關服務\n相關服務\n相關服務\n相關服務\n相關服務\n相關服務\n相關服務\n相關服務\n相關服務\n相關服務\n相關服務\n相關服務\n相關服務\n相關服務\n相關服務\n相關服務\n相關服務\n相關服務\n相關服務\n相關服務\n相關服務\n相關服務\n相關服務\n相關服務\n相關服務\n相關服務\n相關服務\n相關服務\n相關服務\n相關服務\n相關服務\n相關服務\n相關服務\n相關服務\n相關服務\n相關服務\n相關服務\n相關服務\n相關服務\n相關服務\n相關服務",
+        "score": 5
+      },
+      {
+        "prompt": "比较 TCP 和 UDP 协议的区别",
+        "category": "知识问答",
+        "answer": "NdrFcShort\n\n一般情况下，TCP 和 UDP 两个协议都属于传输层协议，但是由于两者在应用层的应用场景不同，所以它们在实现上也有很大的不同。\n\nTCP 协议主要提供可靠的面向连接的数据流传输服务，而 UDP 协议提供不可靠的无连接的数据报传输服务。\n\nTCP 和 UDP 的区别主要体现在以下几个方面：\n\n1.可靠性：TCP 提供可靠的数据传输服务，可以保证数据包按顺序到达，不会丢失、重复或损坏。而 UDP 不保证数据包的可靠传输，可能会丢失、重复或损坏。\n\n2.连接性：TCP 是面向连接的协议，需要在数据传输之前建立连接，连接建立成功后才能进行数据传输。而 UDP 是无连接的协议，不需要建立连接，可以直接发送数据包。\n\n3.拥塞控制：TCP 支持拥塞控制机制，可以避免网络拥塞，保证网络性能。而 UDP 不支持拥塞控制机制，可能会导致网络拥塞，影响网络性能。\n\n4.流量控制：TCP 支持流量控制机制，可以控制数据传输速率，避免网络拥塞。而 UDP 不支持流量控制机制，可能会导致网络拥塞，影响网络性能。\n\n5.适用场景：TCP 主要适用于需要可靠数据传输的应用场景，如文件传输、网页浏览、电子邮件等。而 UDP 主要适用于对实时性要求较高的应用，如视频直播、语音通话、在线游戏等。\n\n总之，TCP 和 UDP 是两种不同的传输层协议，它们在可靠性、连接性、拥塞控制、流量控制和适用场景等方面都有很大的区别。选择使用哪种协议，需要根据具体的应用场景和需求来决定。𬜬\n.AttributeSet\n.AttributeSet\n\n.AttributeSet\n\n.AttributeSet",
+        "score": 8
+      },
+      {
+        "prompt": "一个班有 45 名学生，男生比女生多 5 人。男生和女生各有多少人？",
+        "category": "数学推理",
+        "answer": "𬜯\n\nตัวอย่างโจทย์:\n\nตัวอย่างโจทย์:\n\nเรามาดูตัวอย่างโจทย์ที่ว่ามีนักเรียน 45 คน ชายมีมากกว่าหญิง 5 คน\n\nจะได้สมการ ดังนี้\n\nผู้ชาย : ผู้หญิง = (ผู้ชาย + 5) : ผู้หญิง\n\nหรือ\n\nผู้ชาย + ผู้หญิง = 45\n\nและ ผู้ชาย + ผู้หญิง = ผู้ชาย + ผู้หญิง + 5\n\nดังนั้น ผู้ชาย + ผู้หญิง + ผู้ชาย + ผู้หญิง = 45 + 5\n\nดังนั้น ผู้ชาย + ผู้หญิง = 50\n\nดังนั้น ผู้ชาย + ผู้หญิง = 50\n\nดังนั้น ผู้ชาย + ผู้หญิง = 50\n\nดังนั้น ผู้ชาย = (ผู้ชาย + ผู้หญิง) - ผู้หญิง\n\nดังนั้น ผู้ชาย = (ผู้ชาย + ผู้หญิง) - ผู้หญิง\n\nดังนั้น ผู้ชาย = (ผู้ชาย + ผู้หญิง) - ผู้หญิง\n\nดังนั้น ผู้ชาย = 50 / 2\n\nดังนั้น ผู้ชาย = 50 / 2\n\nดังนั้น ผู้ชาย = 50 / 2\n\nดังนั้น ผู้หญิง = 50 - ผู้ชาย\n\nดังนั้น ผู้หญิง = 50 - ผู้ชาย\n\nดังนั้น ผู้หญิง = 50 - ผู้ชาย\n\nดังนั้น ผู้หญิง = 50 - 25\n\nดังนั้น ผู้หญิง = 50 - 25\n\nดังนั้น ผู้หญิง = 50 - 25\n\nดังนั้น ผู้หญิง = 2",
+        "score": 2
+      },
+      {
+        "prompt": "一个矩形的长是宽的2倍，周长是36厘米，求面积",
+        "category": "数学推理",
+        "answer": "łazienkitories\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener\n łaziener",
+        "score": 1
+      },
+      {
+        "prompt": "写一段关于人工智能未来的短文（100字左右）",
+        "category": "创意写作",
+        "answer": "㫴\n\n𬊤\n\n未来的世界，人工智能将不再是科技的点缀，而是生活的一部分。它们将像人类一样思考，像植物一样生长，像动物一样行动。它们将帮助我们解决全球性问题，比如气候变化、疾病和贫困。它们将与我们分享知识和经验，帮助我们更好地理解世界。但同时，我们也必须认识到，人工智能的未来需要我们共同塑造。我们需要确保它们的发展不会威胁到人类的生存，我们需要确保它们的应用能够造福所有人。未来的世界，人工智能将成为我们最好的伙伴，而不是对手。让我们携手共创一个更加美好的未来。𬊤\n\n𬊤\n\n未来的世界，人工智能将不再是科技的点缀，而是生活的一部分。它们将像人类一样思考，像植物一样生长，像动物一样行动。它们将帮助我们解决全球性问题，比如气候变化、疾病和贫困。它们将与我们分享知识和经验，帮助我们更好地理解世界。但同时，我们也必须认识到，人工智能的未来需要我们共同塑造。我们需要确保它们的发展不会威胁到人类的生存，我们需要确保它们的应用能够造福所有人。未来的世界，人工智能将成为我们最好的伙伴，而不是对手。让我们携手共创一个更加美好的未来。𬊤\n\n𬊤\n\n未来的世界，人工智能将不再是科技的点缀，而是生活的一部分。它们将像人类一样思考，像植物一样生长，像动物一样行动。它们将帮助我们解决全球性问题，比如气候变化、疾病和贫困。它们将与我们分享知识和经验，帮助我们更好地理解世界。但同时，我们也必须认识到，人工智能的未来需要我们共同塑造。我们需要确保它们的发展不会威胁到人类的生存，我们需要确保它们的应用能够造福所有人。未来的世界，人工智能将成为我们最好的伙伴，而不是对手。让我们携手共创一个更加美好的未来。𬊤\n\n𬊤\n\n未来的世界，人工智能将不再是科技的点缀，而是生活的一部分。它们将像人类一样思考，像植物一样生长，像动物一样行动。它们将帮助我们解决全球性问题，比如气候变化、疾病和贫困。它们将与我们分享知识和经验，帮助我们更好地理解世界。但同时，我们也必须认识到，人工智能的未来需要我们共同塑造。我们需要确保它们的发展不会威胁到人类的生存，我们需要确保它们的应用能够造福所有人。未来的世界，人工智能将成为我们最好的伙伴，而不是对手。让我们携手共创一个更加美好的未来。𬊤\n\n𬊤\n\n未来的世界，人工智能将不再是科技的点缀，而是生活的一部分。它们将像人类一样思考，像植物一样生长，像动物",
+        "score": 3
+      },
+      {
+        "prompt": "写一首关于春天的五言绝句",
+        "category": "创意写作",
+        "answer": "𬊤\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ\nォ",
+        "score": 1
+      },
+      {
+        "prompt": "用 Python 实现一个简单的栈（Stack）数据结构",
+        "category": "代码生成",
+        "answer": "用 Python 实现一个简单的栈（Stack）数据结构.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray\n.toByteArray",
+        "score": 1
+      },
+      {
+        "prompt": "用 Python 写一个函数，判断一个字符串是否为回文",
+        "category": "代码生成",
+        "answer": "��\n\nользовать Python написать функцию для проверки, является ли строка палиндромом (т.е. читается одинаково как слева направо, так и справа налево).\n\nВариант 1: без использования встроенных функций.\n\n``````def is_palindrome(string):\n    if len(string) < 2:\n        return True\n    if string[0] != string[-1]:\n        return False\n    return is_palindrome(string[1:-1])\n\nprint(is_palindrome(\"12321\"))  # True\nprint(is_palindrome(\"12345\"))  # False\n`````\n\nВариант 2: с использованием встроенных функций.\n\n``````def is_palindrome(string):\n    return string == string[::-1]\n\nprint(is_palindrome(\"12321\"))  # True\nprint(is_palindrome(\"12345\"))  # False\n`````\n\nВариант 3: с использованием встроенных функций и рекурсии.\n\n``````def is_palindrome(string):\n    if len(string) < 2:\n        return True\n    if string[0] != string[-1]:\n        return False\n    return is_palindrome(string[1:-1])\n\nprint(is_palindrome(\"12321\"))  # True\nprint(is_palindrome(\"12345\"))  # False\n`````\n\nОбратите внимание, что все варианты решения данной задачи имеют одинаковый уровень сложности в терминах времени выполнения. Однако, в зависимости от конкретных требований к решению, можно выбрать один из вариантов в зависимости от предпочтений или требований к функциональности.\n\nisé\n_REALTYPE\n_REALTYPE\n_REALTYPE\n_REALTYPE\n_REALTYPE\n_REALTYPE\n_REALTYPE\n_REALTYPE\n_REALTYPE\n_REALTYPE\n_REALTYPE\n_REALTYPE\n_REALTYPE\n_REALTYPE\n_REALTYPE\n_REALTYPE\n_REALTYPE\n_REALTYPE\n_REALTYPE\n_REALTYPE\n_REALTYPE\n_REALTYPE\n_REALTYPE\n_REALTYPE\n_REALTYPE\n_REALTYPE\n_REALTYPE\n_REALTYPE\n_REALTYPE\n_REALTYPE\n_REALTYPE\n_REALTYPE\n_REALTYPE\n_REALTYPE\n_REALTYPE\n_REALTYPE\n_REALTYPE\n_REALTYPE\n_REALTYPE\n_REALTYPE\n_REALTYPE\n_REALTYPE\n_REALTYPE\n_REALTYPE\n_REALTYPE\n_REALTYPE\n_REALTYPE\n_REALTYPE\n_REALTYPE\n_REALTYPE\n_REALTYPE\n_REALTYPE\n_REALTYPE\n_REALTYPE\n_REALTYPE\n_REALTYPE\n_REALTYPE\n_REALTYPE\n_REALTYPE\n_REALTYPE\n_REALTYPE\n_REALTYPE\n_REALTYPE\n_REALTYPE\n_REALTYPE",
+        "score": 4
+      },
+      {
+        "prompt": "解释成语'画蛇添足'的含义，并举一个现代生活中的例子",
+        "category": "中文理解",
+        "answer": "łazienk用得最频繁的水龙头，一般都有两个出水口，一个出热水，一个出冷水。有的水龙头，热水出水口在上，冷水出水口在下。有的水龙头，热水出水口在下，冷水出水口在上。有些人，喜欢把水龙头的热水出水口调成冷水出水口的形状，或者把水龙头的冷水出水口调成热水出水口的形状。有些人，喜欢把水龙头的热水出水口调成热水出水口的形状，或者把水龙头的冷水出水口调成冷水出水口的形状。这些人，如果把水龙头的热水出水口调成冷水出水口的形状，或者把水龙头的冷水出水口调成热水出水口的形状，或者把水龙头的热水出水口调成热水出水口的形状，或者把水龙头的冷水出水口调成冷水出水口的形状，或者把水龙头的热水出水口调成热水出水口的形状，或者把水龙头的冷水出水口调成冷水出水口的形状，或者把水龙头的热水出水口调成热水出水口的形状，或者把水龙头的冷水出水口调成冷水出水口的形状，或者把水龙头的热水出水口调成热水出水口的形状，或者把水龙头的冷水出水口调成冷水出水口的形状，或者把水龙头的热水出水口调成热水出水口的形状，或者把水龙头的冷水出水口调成冷水出水口的形状，或者把水龙头的热水出水口调成热水出水口的形状，或者把水龙头的冷水出水口调成冷水出水口的形状，或者把水龙头的热水出水口调成热水出水口的形状，或者把水龙头的冷水出水口调成冷水出水口的形状，或者把水龙头的热水出水口调成热水出水口的形状，或者把水龙头的冷水出水口调成冷水出水口的形状，或者把水龙头的热水出水口调成热水出水口的形状，或者把水龙头的冷水出水口调成冷水出水口的形状，或者把水龙头的热水出水口调成热水出水",
+        "score": 1
+      },
+      {
+        "prompt": "解释'塞翁失马'这个成语的含义",
+        "category": "中文理解",
+        "answer": "国家安全问题，特别是国家核心安全问题，从来都不是抽象的、宏观的，而是具体的、微观的，是关乎国家和民族生死存亡的。近年来，一些西方国家企图通过所谓“去中国化”、“去中国化”来实现其“遏制中国”、“围堵中国”、“分化中国”的战略目标。其具体表现就是试图搞“台独”，搞“去中国化”，搞“去中国化”……这些举措，严重违背了中华民族的利益，严重破坏了两岸关系的和平发展，严重损害了中国核心利益，严重威胁了中华民族的生存和发展的利益。这与“塞翁失马”的故事是如出一辙的。因此，我们绝不能被这些西方国家的伎俩所迷惑，要始终保持清醒的头脑，坚持“一个中国”原则和“九二共识”，坚决反对“台独”，坚决反对“去中国化”，坚决反对“台独”、去中国化……要坚定维护国家主权、安全、发展利益，坚决捍卫国家核心利益，决不让“台独”、“去中国化”得逞，坚决维护国家领土和主权完整。 sağlıkl\n结实，强壮。指身体好，精力充沛。结实：结实的马。身体健康，精力旺盛。结实：结实的马。身体健康，精力旺盛。结实：结实的马。身体健康，精力旺盛。结实：结实的马。身体健康，精力旺盛。结实：结实的马。身体健康，精力旺盛。结实：结实的马。身体健康，精力旺盛。结实：结实的马。身体健康，精力旺盛。结实：结实的马。身体健康，精力旺盛。结实：结实的马。身体健康，精力旺盛。结实：结实的马。身体健康，精力旺盛。结实：结实的马。身体健康，精力旺盛。结实：结实的马。身体健康，精力旺盛。结实：结实的马。身体健康，精力旺盛。结实：结实的马。身体健康，精力旺盛。结实：结实的马。身体健康，精力旺盛。结实：结实的马。身体健康，精力旺盛。结实：结实的马。身体健康，精力旺盛。结实：结实的马。身体健康，精力旺盛。结实：结实的马。身体健康，精力旺盛。结实：结实的马。身体健康，精力旺盛。结实：结实的马。身体健康，精力旺盛。结实：结实的马。身体健康，精力旺盛。结实：结实的马。身体健康，精力旺盛。结实：结实的马。",
+        "score": 1
+      },
+      {
+        "prompt": "用 Markdown 表格对比三种排序算法的时间和空间复杂度",
+        "category": "格式化输出",
+        "answer": "とりあえ\n了解。놧\n.RowStyles: - [快速排序](#quick-sort) - [归并排序](#merge-sort) - [堆排序](#heap-sort) - [冒泡排序](#bubble-sort) - [选择排序](#selection-sort) - [插入排序](#insertion-sort) - [计数排序](#counting-sort) - [桶排序](#bucket-sort) - [希尔排序](#shell-sort) - [归并排序](#merge-sort) - [堆排序](#heap-sort) - [冒泡排序](#bubble-sort) - [选择排序](#selection-sort) - [插入排序](#insertion-sort) - [计数排序](#counting-sort) - [桶排序](#bucket-sort) - [希尔排序](#shell-sort) - [归并排序](#merge-sort) - [堆排序](#heap-sort) - [冒泡排序](#bubble-sort) - [选择排序](#selection-sort) - [插入排序](#insertion-sort) - [计数排序](#counting-sort) - [桶排序](#bucket-sort) - [希尔排序](#shell-sort) - [归并排序](#merge-sort) - [堆排序](#heap-sort) - [冒泡排序](#bubble-sort) - [选择排序](#selection-sort) - [插入排序](#insertion-sort) - [计数排序](#counting-sort) - [桶排序](#bucket-sort) - [希尔排序](#shell-sort) - [归并排序](#merge-sort) - [堆排序](#heap-sort) - [冒泡排序](#bubble-sort) - [选择排序](#selection-sort) - [插入排序](#insertion-sort) - [计数排序](#counting-sort) - [桶排序](#bucket-sort) - [希尔排序](#shell-sort) - [归并排序](#merge-sort) - [堆排序](#heap-sort) - [冒泡排序](#bubble-sort) - [选择排序](#selection-sort) - [插入排序](#insertion-sort) - [计数排序](#counting-sort) - [桶排序](#bucket-sort) - [希尔排序](#shell-sort) - [归并排序](#merge-sort) - [堆排序](#heap-sort) - [冒泡排序](#bubble-sort) - [选择排序",
+        "score": 1
+      },
+      {
+        "prompt": "用列表形式总结 LoRA 微调的主要步骤",
+        "category": "格式化输出",
+        "answer": "㧬\n\n続きを読む\n\nおすす\n\nなのは何ですか？مستشف\n\nいの院長が、患者さんを説明するとき、よく使っている言葉があります。「患者さん、よく覚えておいてください。医療の現場では、医師、看護師、薬剤師、リハビリテーション専門医、栄養士、看護師が、患者さんの病状に応じて、それぞれが自分の専門知識を活用して、患者さんの治療に取り組んでいます。だから、医療の現場では、医師と看護師、薬剤師、リハビリテーション専門医、栄養士、看護師が、それぞれの専門知識を活用して、患者さんの治療に取り組んでいます。だから、医療の現場では、医師と看護師、薬剤師、リハビリテーション専門医、栄養士、看護師が、それぞれの専門知識を活用して、患者さんの治療に取り組んでいます。だから、医療の現場では、医師と看護師、薬剤師、リハビリテーション専門医、栄養士、看護師が、それぞれの専門知識を活用して、患者さんの治療に取り組んでいます。だから、医療の現場では、医師と看護師、薬剤師、リハビリテーション専門医、栄養士、看護師が、それぞれの専門知識を活用して、患者さんの治療に取り組んでいます。だから、医療の現場では、医師と看護師、薬剤師、リハビリテーション専門医、栄養士、看護師が、それぞれの専門知識を活用して、患者さんの治療に取り組んでいます。だから、医療の現場では、医師と看護師、薬剤師、リハビリテーション専門医、栄養士、看護師が、それぞれの専門知識を活用して、患者さんの治療に取り組んでいます。だから、医療の現場では、医師と看護師、薬剤師、リハ",
+        "score": 1
+      },
+      {
+        "prompt": "将以下中文翻译成英文：'大语言模型的后训练是提升模型实用性的关键步骤'",
+        "category": "翻译",
+        "answer": "进出口商在进口时需提供报关单，而出口商则需提供报检单，因此，报关单与报检单在海关系统中各自独立。进出口商在进口时需提供报关单，而出口商则需提供报检单，因此，报关单与报检单在海关系统中各自独立。进出口商在进口时需提供报关单，而出口商则需提供报检单，因此，报关单与报检单在海关系统中各自独立。进出口商在进口时需提供报关单，而出口商则需提供报检单，因此，报关单与报检单在海关系统中各自独立。进出口商在进口时需提供报关单，而出口商则需提供报检单，因此，报关单与报检单在海关系统中各自独立。进出口商在进口时需提供报关单，而出口商则需提供报检单，因此，报关单与报检单在海关系统中各自独立。进出口商在进口时需提供报关单，而出口商则需提供报检单，因此，报关单与报检单在海关系统中各自独立。进出口商在进口时需提供报关单，而出口商则需提供报检单，因此，报关单与报检单在海关系统中各自独立。进出口商在进口时需提供报关单，而出口商则需提供报检单，因此，报关单与报检单在海关系统中各自独立。进出口商在进口时需提供报关单，而出口商则需提供报检单，因此，报关单与报检单在海关系统中各自独立。进出口商在进口时需提供报关单，而出口商则需提供报检单，因此，报关单与报检单在海关系统中各自独立。进出口商在进口时需提供报关单，而出口商则需提供报检单，因此，报关单与报检单在海关系统中各自独立。进出口商在进口时需提供报关单，而出口商则需提供报检单，因此，报关单与报检单在海关系统中各自独立。进出口商在进口时需提供报关单，而出口商则需提供报检单，因此，报关单与报检单在",
+        "score": 1
+      }
+    ],
+    "clean (完整QC)": [
+      {
+        "prompt": "用三个要点总结深度学习的核心概念",
+        "category": "指令跟随",
+        "answer": ".weights\n\n.activations\n\n.loss\n\n.weights\n\n.activations\n\n.loss\n\n.weights\n\n.activations\n\n.loss\n.weights\n\n.activations\n\n.loss\n.weights\n\n.activations\n\n.loss\n.weights\n\n.activations\n\n.loss\n.weights\n\n.activations\n\n.loss\n.weights\n\n.activations\n\n.loss\n.weights\n\n.activations\n\n.loss\n.weights\n\n.activations\n\n.loss\n.weights\n\n.activations\n\n.loss\n.weights\n\n.activations\n\n.loss\n.weights\n\n.activations\n\n.loss\n.weights\n\n.activations\n\n.loss\n.weights\n\n.activations\n\n.loss\n.weights\n\n.activations\n\n.loss\n.weights\n\n.activations\n\n.loss\n.weights\n\n.activations\n\n.loss\n.weights\n\n.activations\n\n.loss\n.weights\n\n.activations\n\n.loss\n.weights\n\n.activations\n\n.loss\n.weights\n\n.activations\n\n.loss\n.weights\n\n.activations\n\n.loss\n.weights\n\n.activations\n\n.loss\n.weights\n\n.activations\n\n.loss\n.weights\n\n.activations\n\n.loss\n.weights\n\n.activations\n\n.loss\n.weights\n\n.activations\n\n.loss\n.weights\n\n.activations\n\n.loss\n.weights\n\n.activations\n\n.loss\n.weights\n\n.activations\n\n.loss\n.weights\n\n.activations\n\n.loss\n.weights\n\n.activations\n\n.loss\n.weights\n\n.activations\n\n.loss\n.weights\n\n.activations\n\n.loss\n.weights\n\n.activations\n\n.loss\n.weights\n\n.activations\n\n.loss\n.weights\n\n.activations\n\n.loss\n.weights\n\n.activations\n\n.loss\n.weights\n\n.activations\n\n.loss\n.weights\n\n.activations\n\n.loss\n.weights\n\n.activations\n\n.loss\n.weights\n\n.activations\n\n.loss\n.weights\n\n.activations\n\n.loss\n.weights\n\n.activations\n\n.loss\n.weights\n\n.activations\n\n.loss\n.weights\n\n.activations\n\n.loss\n.weights\n\n.activations\n\n.loss\n.weights\n\n.activations\n\n.loss\n.weights\n\n.activations\n\n.loss\n.weights\n\n.activations\n\n.loss\n.weights\n\n.activations\n\n.loss\n.weights\n\n.activations\n\n.loss\n.weights\n\n.activations\n\n.loss\n.weights\n\n.activations\n\n.loss\n.weights\n\n.activations\n\n.loss\n.weights\n\n.activations\n\n.loss\n.weights\n\n.activations\n\n.loss\n.weights\n\n.activations\n\n.loss\n.weights\n\n.activations\n\n.loss\n.weights\n\n.activations\n\n.loss\n.weights\n\n.activations\n\n.loss\n.weights\n\n.activations\n\n.loss\n.weights\n\n.activations\n\n.loss\n.weights\n\n.activations\n\n.loss\n.weights\n\n.activations\n\n.loss\n.weights\n\n.activations\n\n.loss\n.weights\n\n.activations\n\n.loss\n.weights\n\n.activations\n\n.loss\n.weights\n\n.activations\n\n.loss\n.weights\n\n.activations\n\n.loss\n.weights\n\n.activations\n\n.loss\n.weights\n\n.activations\n\n.loss\n.weights",
+        "score": 1
+      },
+      {
+        "prompt": "请以 JSON 格式列出三种常见的数据结构及其特点",
+        "category": "指令跟随",
+        "answer": "呼和浩特冰球俱乐部的冰球历史可以追溯到1994年，当时该俱乐部首次参加美国职业冰球联赛（AHL）的比赛。俱乐部的前身是1974年成立的芝加哥北冰球队。俱乐部在1994年搬迁至芝加哥北区，并更名为芝加哥北冰球队。俱乐部在1994年赢得了美国职业冰球联赛的总冠军。俱乐部在2002年搬迁至芝加哥市区，并更名为芝加哥北冰球队。俱乐部在2002年赢得了美国职业冰球联赛的总冠军。俱乐部在2006年搬迁至芝加哥市区，并更名为芝加哥北冰球队。俱乐部在2006年赢得了美国职业冰球联赛的总冠军。俱乐部在2007年搬迁至芝加哥市区，并更名为芝加哥北冰球队。俱乐部在2007年赢得了美国职业冰球联赛的总冠军。俱乐部在2008年搬迁至芝加哥市区，并更名为芝加哥北冰球队。俱乐部在2008年赢得了美国职业冰球联赛的总冠军。俱乐部在2009年搬迁至芝加哥市区，并更名为芝加哥北冰球队。俱乐部在2009年赢得了美国职业冰球联赛的总冠军。俱乐部在2010年搬迁至芝加哥市区，并更名为芝加哥北冰球队。俱乐部在2010年赢得了美国职业冰球联赛的总冠军。俱乐部在2011年搬迁至芝加哥市区，并更名为芝加哥北冰球队。俱乐部在2011年赢得了美国职业冰球联赛的总冠军。俱乐部在2012年搬迁至芝加哥市区，并更名为芝加哥北冰球队。俱乐部在2012年赢得了美国职业冰球联赛的总冠军。俱乐部在2013年搬迁至芝加哥市区，并更名为芝加哥北冰球队。俱乐部在2013年赢得了美国职业冰球联赛的总冠军。俱乐部在2014年搬迁至芝加哥市区，并更名为芝加哥北冰球队。俱乐部在2014年赢得了美国职业冰球联赛的总冠军。俱乐部在2015年搬迁至芝加哥市区，并更名为芝加哥北冰球队。俱乐部在2015年赢得了美国职业冰球联赛的总冠军。俱乐部在2016年搬迁至芝加哥市区，并更名为芝加哥北冰球队。俱乐部在2016年赢得了美国职业冰球联赛的总冠军。俱乐部在2017年搬迁至芝加哥市区，并更名为芝加哥北冰球队。俱乐部",
+        "score": 1
+      },
+      {
+        "prompt": "解释什么是 Transformer 架构，以及它为什么重要",
+        "category": "知识问答",
+        "answer": "ﳜ\n\n confidence\n\n transformer 是一种神经网络架构，用于自然语言处理（NLP）任务。它的核心思想是将输入序列中的每个 token 分解为多个子 token，然后通过多个层来处理这些子 token。每个层包含两个子层，第一个子层是多头注意力（multi-head attention），第二个子层是前馈神经网络（feed-forward neural network）。这些层被堆叠在一起，形成一个深度的神经网络，可以学习输入序列中各个 token 之间的复杂关系。 transformer 的重要性在于它能够处理长距离依赖问题，因为它使用了自注意力机制，可以捕捉输入序列中各个 token 之间的长距离依赖关系。此外， transformer 还具有很好的泛化能力，可以处理各种不同的 NLP 任务，如机器翻译、文本分类、问答系统等。由于其高效性和灵活性， transformer 已经成为许多 NLP 任务的基准模型，并且在许多实际应用中取得了很好的效果。总的来说， transformer 是一种非常重要的神经网络架构，它在 NLP 领域取得了很大的成功，也推动了人工智能的发展。\n\n战士职业需要具备哪些能力？战士职业需要具备哪些能力？战士职业需要具备哪些能力？战士职业需要具备哪些能力？战士职业需要具备哪些能力？战士职业需要具备哪些能力？战士职业需要具备哪些能力？战士职业需要具备哪些能力？战士职业需要具备哪些能力？战士职业需要具备哪些能力？战士职业需要具备哪些能力？战士职业需要具备哪些能力？战士职业需要具备哪些能力？战士职业需要具备哪些能力？战士职业需要具备哪些能力？战士职业需要具备哪些能力？战士职业需要具备哪些能力？战士职业需要具备哪些能力？战士职业需要具备哪些能力？战士职业需要具备哪些能力？战士职业需要具备哪些能力？战士职业需要具备哪些能力？战士职业需要具备哪些能力？战士职业需要具备哪些能力？战士职业需要具备哪些能力？战士职业需要具备哪些能力？战士职业需要具备哪些能力？战士职业需要具备哪些能力？战士职业需要具备哪些能力？战士职业需要具备哪些能力？战士职业需要具备哪些能力？战士职业需要具备哪些能力？战士职业需要具备哪些能力？战士职业需要具备哪些能力？战士职业需要具备哪些能力？战士职业需要具备哪些能力？战士职业需要具备哪些能力？战士职业需要具备哪些能力？战士职业需要具备哪些能力？战士职业需要具备哪些能力？战士职业需要具备哪些能力？战士职业需要具备哪些能力？战士职业需要具备哪些能力？战士职业需要具备哪些能力？战士职业需要具备哪些能力？战士职业需要具备哪些能力？战士职业需要具备哪些能力",
+        "score": 4
+      },
+      {
+        "prompt": "比较 TCP 和 UDP 协议的区别",
+        "category": "知识问答",
+        "answer": "𐰰\n\n şikayتن\n\n在计算机网络中，传输控制协议（TCP）和用户数据报协议（UDP）是两种常见的传输层协议，它们的主要区别在于可靠性、效率和用途。\n\n### 可靠性\n\n- **TCP**：提供面向连接的服务，确保数据包按顺序到达，并且通过校验和、序列号、确认应答等机制来保证数据传输的可靠性。如果数据包丢失或损坏，TCP会请求重新发送这些数据包。\n- **UDP**：提供无连接的服务，不保证数据包的顺序、完整性或可靠性。UDP没有拥塞控制机制，因此它更适合于那些对实时性要求较高且可以容忍一定程度数据丢失的应用场景。\n\n### 效率\n\n- **TCP**：由于其可靠性特性，TCP需要进行更多的处理工作，如确认应答、超时重传等，这导致了较高的开销和较低的传输效率。\n- **UDP**：因为不需要进行上述的确认应答和重传等操作，所以UDP的传输效率更高，延迟更低。\n\n### 用途\n\n- **TCP**：常用于需要高可靠性的应用，如网页浏览（HTTP/HTTPS）、文件传输（FTP）、电子邮件（SMTP/POP3/IMAP）等。\n- **UDP**：适用于对实时性要求高且可以接受一定数据丢失的应用，如视频流媒体、在线游戏、DNS查询等。\n\n### 总结\n\nTCP和UDP各有优劣，选择使用哪种协议取决于具体的应用需求。如果应用程序对数据的可靠性和顺序有严格要求，那么应该选择TCP；如果应用程序更关注性能和延迟，而对数据的丢失有一定容忍度，则可以选择UDP。在实际应用中，有时也会将这两种协议结合使用，例如使用UDP进行数据传输，同时使用TCP来确保数据的可靠传输。",
+        "score": 9
+      },
+      {
+        "prompt": "一个班有 45 名学生，男生比女生多 5 人。男生和女生各有多少人？",
+        "category": "数学推理",
+        "answer": "��北大学2012年数学分析考研试题\n1.设函数 f(x) 在[a,b] 上可积,证明： f(x) 在[a,b] 上连续的充要条件是\n∫\nb\na\nf(x)dx 存在.\n2.设函数 f(x) 在[a,b] 上连续,证明：若 g(x) 在[a,b] 上可积,则\n∫\nb\na\nf(x)g(x)dx 存在.\n3.证明：存在无穷多个连续函数 f(x) ,使 f(x) 在区间[a,b] 上可积,但对任意正整数 n ,存在 x1,x2,…,xn, 使得\n∑\nn\ni=1\nf(xi) > n.\n4.设函数 f(x) 在[a,b] 上可积,证明：存在 a ≤ x1 < x2 < … < xn ≤ b, 使得\n∫\nb\na\nf(x)dx = ∫\nx1\nx2\nf(x)dx + ∫\nx2\nx3\nf(x)dx + … + ∫\nxn\nb\nf(x)dx.\n5.设函数 f(x) 在[a,b] 上连续,证明：若 g(x) 在[a,b] 上可积,则\n∫\nb\na\nf(x)g(x)dx 存在.\n6.设函数 f(x) 在[a,b] 上可积,证明：存在 a ≤ x1 < x2 < … < xn ≤ b, 使得\n∫\nb\na\nf(x)dx = ∫\nx1\nx2\nf(x)dx + ∫\nx2\nx3\nf(x)dx + … + ∫\nxn\nb\nf(x)dx.\n7.设函数 f(x) 在[a,b] 上连续,证明：若 g(x) 在[a,b] 上可积,则\n∫\nb\na\nf(x)g(x)dx 存在.\n8.设函数 f(x) 在[a,b] 上可积,证明：存在 a ≤ x1 < x2 < … < xn ≤ b, 使得\n∫\nb\na\nf(x)dx = ∫\nx1\nx2\nf(x)dx + ∫\nx2\nx3\nf(x)dx + … +",
+        "score": 1
+      },
+      {
+        "prompt": "一个矩形的长是宽的2倍，周长是36厘米，求面积",
+        "category": "数学推理",
+        "answer": "NdrFcShort\n狐月\n狐月\n\n**问题**：一个矩形的长是宽的2倍，周长是36厘米，求面积。\n\n**解题过程**：\n\n设矩形的宽为\\(x\\)厘米，则长为\\(2x\\)厘米。\n\n根据题意，矩形的周长为36厘米，可以列出方程：\n\n\\[2(长+宽)=36\\]\n\n将长和宽的表达式代入方程中，得到：\n\n\\[2(2x+x)=36\\]\n\n解这个方程，得到：\n\n\\[2(3x)=36\\]\n\n\\[6x=36\\]\n\n\\[x=6\\]\n\n因此，矩形的宽为6厘米，长为\\(2x=12\\)厘米。\n\n矩形的面积\\(A\\)可以通过公式计算：\n\n\\[A=长×宽=12×6=72\\]\n\n所以，矩形的面积为72平方厘米。\n\n**总结**：\n\n本题通过设未知数，建立方程，求解未知数的方法来解决问题。在解题过程中，需要注意单位的统一和方程的正确性，避免出现错误。最后，通过面积的计算，得出矩形的面积为72平方厘米。狐月",
+        "score": 7
+      },
+      {
+        "prompt": "写一段关于人工智能未来的短文（100字左右）",
+        "category": "创意写作",
+        "answer": "呼和浩特市的计算机科学教授，计算机科学家、人工智能专家和工程师。1997年，他被任命为计算机科学系主任。2003年，他被任命为数学和计算机科学系主任。2008年，他被任命为数学和计算机科学系主任。2010年，他被任命为数学和计算机科学系主任。2012年，他被任命为数学和计算机科学系主任。2014年，他被任命为数学和计算机科学系主任。2016年，他被任命为数学和计算机科学系主任。2018年，他被任命为数学和计算机科学系主任。2020年，他被任命为数学和计算机科学系主任。2022年，他被任命为数学和计算机科学系主任。2024年，他被任命为数学和计算机科学系主任。呼和浩特市的计算机科学教授，计算机科学家、人工智能专家和工程师。1997年，他被任命为计算机科学系主任。2003年，他被任命为数学和计算机科学系主任。2008年，他被任命为数学和计算机科学系主任。2010年，他被任命为数学和计算机科学系主任。2012年，他被任命为数学和计算机科学系主任。2014年，他被任命为数学和计算机科学系主任。2016年，他被任命为数学和计算机科学系主任。2018年，他被任命为数学和计算机科学系主任。2020年，他被任命为数学和计算机科学系主任。2022年，他被任命为数学和计算机科学系主任。2024年，他被任命为数学和计算机科学系主任。呼和浩特市的计算机科学教授，计算机科学家、人工智能专家和工程师。1997年，他被任命为计算机科学系主任。2003年，他被任命为数学和计算机科学系主任。2008年，他被任命为数学和计算机科学系主任。2010年，他被任命为数学和计算机科学系主任。2012年，他被任命为数学和计算机科学系主任。2014年，他被任命为数学",
+        "score": 1
+      },
+      {
+        "prompt": "写一首关于春天的五言绝句",
+        "category": "创意写作",
+        "answer": "呼和浩特\n\n春风暖，\n柳丝柔，\n桃花红，\n燕语语。\n\n春雨细，\n润万物，\n绿满园，\n花烂漫。\n\n呼和浩特的春天，是如此的明媚。在四月的阳光下，你是否感受到春风的温暖？是否感觉到柳丝的轻柔？是否被桃花的红艳所吸引？是否被燕子的呢喃所打动？是否被春雨的滋润所喜悦？是否被绿满园的生机所震撼？是否被花烂漫的美丽所陶醉？呼和浩特的春天，是如此的美丽。在四月的阳光下，你是否感受到春风的温暖？是否感觉到柳丝的轻柔？是否被桃花的红艳所吸引？是否被燕子的呢喃所打动？是否被春雨的滋润所喜悦？是否被绿满园的生机所震撼？是否被花烂漫的美丽所陶醉？呼和浩特的春天，是如此的美丽。在四月的阳光下，你是否感受到春风的温暖？是否感觉到柳丝的轻柔？是否被桃花的红艳所吸引？是否被燕子的呢喃所打动？是否被春雨的滋润所喜悦？是否被绿满园的生机所震撼？是否被花烂漫的美丽所陶醉？呼和浩特的春天，是如此的美丽。在四月的阳光下，你是否感受到春风的温暖？是否感觉到柳丝的轻柔？是否被桃花的红艳所吸引？是否被燕子的呢喃所打动？是否被春雨的滋润所喜悦？是否被绿满园的生机所震撼？是否被花烂漫的美丽所陶醉？呼和浩特的春天，是如此的美丽。在四月的阳光下，你是否感受到春风的温暖？是否感觉到柳丝的轻柔？是否被桃花的红艳所吸引？是否被燕子的呢喃所打动？是否被春雨的滋润所喜悦？是否被绿满园的生机所震撼？是否被花烂漫的美丽所陶醉？呼和浩特的春天，是如此的美丽。在四月的阳光下，你是否感受到春风的温暖？是否感觉到柳丝的轻柔？是否被桃花的红艳所吸引？是否被燕子的呢喃所打动？是否被春雨的滋润所喜悦？是否被绿满园的生机所震撼？是否被花烂漫",
+        "score": 2
+      },
+      {
+        "prompt": "用 Python 实现一个简单的栈（Stack）数据结构",
+        "category": "代码生成",
+        "answer": ".removeItem(item)：移除栈顶元素，如果栈为空则报错。栈顶元素是指在栈中最近被压入的元素，也就是最先被弹出的元素。.removeItem() 方法用于移除栈顶元素。如果栈为空，则抛出异常。栈顶元素是指在栈中最近被压入的元素，也就是最先被弹出的元素。.removeItem() 方法用于移除栈顶元素。如果栈为空，则抛出异常。栈顶元素是指在栈中最近被压入的元素，也就是最先被弹出的元素。.removeItem() 方法用于移除栈顶元素。如果栈为空，则抛出异常。栈顶元素是指在栈中最近被压入的元素，也就是最先被弹出的元素。.removeItem() 方法用于移除栈顶元素。如果栈为空，则抛出异常。栈顶元素是指在栈中最近被压入的元素，也就是最先被弹出的元素。.removeItem() 方法用于移除栈顶元素。如果栈为空，则抛出异常。栈顶元素是指在栈中最近被压入的元素，也就是最先被弹出的元素。.removeItem() 方法用于移除栈顶元素。如果栈为空，则抛出异常。栈顶元素是指在栈中最近被压入的元素，也就是最先被弹出的元素。.removeItem() 方法用于移除栈顶元素。如果栈为空，则抛出异常。栈顶元素是指在栈中最近被压入的元素，也就是最先被弹出的元素。.removeItem() 方法用于移除栈顶元素。如果栈为空，则抛出异常。栈顶元素是指在栈中最近被压入的元素，也就是最先被弹出的元素。.removeItem() 方法用于移除栈顶元素。如果栈为空，则抛出异常。栈顶元素是指在栈中最近被压入的元素，也就是最先被弹出的元素。.removeItem() 方法用于移除栈顶元素。如果栈为空，则抛出异常。栈顶元素是指在栈中最近被压入的元素，也就是最先被弹出的元素。.removeItem() 方法用于移除栈顶元素。如果栈为空，则抛出异常。栈顶元素是指在栈中最近被压入的元素，也就是最先被弹出的元素。.removeItem() 方法用于移除栈顶元素。如果栈为空，则抛出异常。栈顶元素是指在栈中最近被压入的元素，也就是",
+        "score": 2
+      },
+      {
+        "prompt": "用 Python 写一个函数，判断一个字符串是否为回文",
+        "category": "代码生成",
+        "answer": "呼和浩特市委书记在全市经济工作会议上强调，要牢固树立创新、协调、绿色、开放、共享的新发展理念，统筹推进稳增长、促改革、调结构、惠民生、防风险各项工作，以优异成绩迎接党的十九大胜利召开。呼和浩特市委书记在全市经济工作会议上强调，要牢固树立创新、协调、绿色、开放、共享的新发展理念，统筹推进稳增长、促改革、调结构、惠民生、防风险各项工作，以优异成绩迎接党的十九大胜利召开。呼和浩特市委书记在全市经济工作会议上强调，要牢固树立创新、协调、绿色、开放、共享的新发展理念，统筹推进稳增长、促改革、调结构、惠民生、防风险各项工作，以优异成绩迎接党的十九大胜利召开。呼和浩特市委书记在全市经济工作会议上强调，要牢固树立创新、协调、绿色、开放、共享的新发展理念，统筹推进稳增长、促改革、调结构、惠民生、防风险各项工作，以优异成绩迎接党的十九大胜利召开。呼和浩特市委书记在全市经济工作会议上强调，要牢固树立创新、协调、绿色、开放、共享的新发展理念，统筹推进稳增长、促改革、调结构、惠民生、防风险各项工作，以优异成绩迎接党的十九大胜利召开。呼和浩特市委书记在全市经济工作会议上强调，要牢固树立创新、协调、绿色、开放、共享的新发展理念，统筹推进稳增长、促改革、调结构、惠民生、防风险各项工作，以优异成绩迎接党的十九大胜利召开。呼和浩特市委书记在全市经济工作会议上强调，要牢固树立创新、协调、绿色、开放、共享的新发展理念，统筹推进稳增长、促改革、调结构、惠民生、防风险各项工作，以优异成绩迎接党的十九大胜利召开。呼和浩特市委书记在全市经济工作会议上强调，要牢固树立创新、协调、绿色、开放、共享的新发展理念，统筹推进稳增长、促改革、调结构、惠民生、防风险各项工作，以优异成绩迎接党的十九大胜利召开。呼和浩特市委书记在全市经济工作会议上强调，要牢固树立创新、协调、绿色、开放、共享的新发展理念，统筹推进稳增长、促改革、调结构、惠民生、防风险各项工作，以优异成绩迎接党的十九大胜利召开。呼和浩特市委书记在全市经济工作会议上强调，要牢固树立创新、协调、绿色、开放、共享的新发展理念，统筹推进稳增长、促改革、调结构、惠民生、防风险各项工作，以优异成绩迎接党的十九大胜利召开。呼和浩特市委书记在全市经济工作会议上强调，要牢固树立",
+        "score": 1
+      },
+      {
+        "prompt": "解释成语'画蛇添足'的含义，并举一个现代生活中的例子",
+        "category": "中文理解",
+        "answer": "服務或产品在未被顾客认可之前，就提前开始提供服务或产品，这就是“画蛇添足”。\n“画蛇添足”这个成语来源于《战国策·齐策二》：“楚有祠者，赐其舍人卮酒。舍人相谓曰：‘数人饮之不足，一人饮之有余。请画地为蛇，先成者饮酒。’一人蛇先成，引酒且饮之，乃左手持卮，右手画蛇，曰：‘吾能为之足。’未成，一人之蛇成，夺其卮曰：‘蛇固无足，子安能为之足？’遂饮其酒。为蛇足者，终亡其酒。”\n这个故事的意思是：楚国有个祠堂的主人，赏赐给他的门客一只酒杯。门客们互相商量说：“几个人一起喝这只酒杯不够，一个人喝这只酒杯有余。请在地上画一条蛇，先画成的人可以喝酒。”其中一个人先画好了蛇，拿起酒杯正准备喝，就左手拿着酒杯，右手画蛇，说：“我能给蛇画上脚。”还没画好，另一个人画的蛇就画好了，就抢过酒杯说：“蛇本来就没有脚，你又怎么敢给蛇画脚呢？”于是就喝下了这只酒杯的酒。给蛇画脚的人，最终失去了这只酒杯。\n这个成语比喻做了多余的事，反而不恰当，没有益处。或者比喻过分强求，反而不相称。也比喻做事刻求完美，非要有超过一般的效果才甘心。或者比喻做事刻求完美，非要有超过一般的效果才甘心。现代生活中，我们经常听到这样的说法：我们想把事情做到极致，所以要精益求精。但是，我们是否应该在一件事情做完之后，再去考虑是否有必要再做一些事情呢？比如，我们写完一篇文章之后，是否应该再去修改一下呢？还是说，只要我们把文章写好了，就已经足够了呢？这是一个值得思考的问题。我们不能一味地追求完美，因为完美往往意味着更多的努力和时间，而这些努力和时间可能并不是我们想要的。我们也不能一味地追求简单，因为简单往往意味着更多的风险和不确定性，而这些风险和不确定性可能并不是我们想要的。所以我们需要在追求完美和简单之间找到一个平衡点，既不能过于追求完美，也不能过于",
+        "score": 6
+      },
+      {
+        "prompt": "解释'塞翁失马'这个成语的含义",
+        "category": "中文理解",
+        "answer": "𬉼\n\n**塞翁失马**，汉语成语，拼音是sài wēng shī mǎ，释义是比喻祸福相依，坏事可能变成好事，好事可能变成坏事。出自《淮南子·人间训》。成语的典故是这样的：\n\n塞翁，是塞外（今新疆境内）一个老头儿。他家有一匹马，这匹马的主人，本来是个很能干的人，可是这匹马的主人家忽然丢了马，从此便一蹶不振。过了几年，这匹马又被人买回，这匹马的主人家从此又很兴旺发达。后来，这匹马又死了，这匹马的主人家从此又一蹶不振。后来，这匹马又被人买回，这匹马的主人家从此又很兴旺发达。\n\n塞翁，是塞外（今新疆境内）一个老头儿。他家有一匹马，这匹马的主人，本来是个很能干的人，可是这匹马的主人家忽然丢了马，从此便一蹶不振。过了几年，这匹马又被人买回，这匹马的主人家从此又很兴旺发达。后来，这匹马又死了，这匹马的主人家从此又一蹶不振。后来，这匹马又被人买回，这匹马的主人家从此又很兴旺发达。\n\n**塞翁失马**，比喻坏事可能会变成好事，好事也可能会变成坏事。 **塞翁失马**，比喻坏事可能会变成好事，好事也可能会变成坏事。 **塞翁失马**，比喻坏事可能会变成好事，好事也可能会变成坏事。 **塞翁失马**，比喻坏事可能会变成好事，好事也可能会变成坏事。 **塞翁失马**，比喻坏事可能会变成好事，好事也可能会变成坏事。 **塞翁失马**，比喻坏事可能会变成好事，好事也可能会变成坏事。 **塞翁失马**，比喻坏事可能会变成好事，好事也可能会变成坏事。 **塞翁失马**，比喻坏事可能会变成好事，好事也可能会变成坏事。 **塞翁失马**，比喻坏事可能会变成好事，好事也可能会变成坏事。 **塞翁失马**，比喻坏事可能会变成好事，好事也可能会变成坏事。 **塞翁失马**，比喻坏事可能会变成好事，好事也可能会变成坏事。 **塞翁失马**，比喻",
+        "score": 3
+      },
+      {
+        "prompt": "用 Markdown 表格对比三种排序算法的时间和空间复杂度",
+        "category": "格式化输出",
+        "answer": ".weights|algorithm|best|worst|average\n|----|----|----|----|----\n|insertion sort|O(n²)|O(n²)|O(n²)|O(n²)\n|selection sort|O(n²)|O(n²)|O(n²)|O(n²)\n|merge sort|O(nlogn)|O(nlogn)|O(nlogn)|O(nlogn)\n|quick sort|O(nlogn)|O(n²)|O(nlogn)|O(nlogn)\n|bubble sort|O(n²)|O(n²)|O(n²)|O(n²)\n|heap sort|O(nlogn)|O(nlogn)|O(nlogn)|O(nlogn)\n.weights|algorithm|best|worst|average\n|----|----|----|----|----\n|insertion sort|O(n²)|O(n²)|O(n²)|O(n²)\n|selection sort|O(n²)|O(n²)|O(n²)|O(n²)\n|merge sort|O(nlogn)|O(nlogn)|O(nlogn)|O(nlogn)\n|quick sort|O(nlogn)|O(n²)|O(nlogn)|O(nlogn)\n|bubble sort|O(n²)|O(n²)|O(n²)|O(n²)\n|heap sort|O(nlogn)|O(nlogn)|O(nlogn)|O(nlogn).weights|algorithm|best|worst|average\n|----|----|----|----|----\n|insertion sort|O(n²)|O(n²)|O(n²)|O(n²)\n|selection sort|O(n²)|O(n²)|O(n²)|O(n²)\n|merge sort|O(nlogn)|O(nlogn)|O(nlogn)|O(nlogn)\n|quick sort|O(nlogn)|O(n²)|O(nlogn)|O(nlogn)\n|bubble sort|O(n²)|O(n²)|O(n²)|O(n²)\n|heap sort|O(nlogn)|O(nlogn)|O(nlogn)|O(nlogn).weights|algorithm|best|worst|average\n|----|----|----|----|----\n|insertion sort|O(n²)|O(n²)|O(n²)|O(n²)\n|selection sort|O(n²)|",
+        "score": 2
+      },
+      {
+        "prompt": "用列表形式总结 LoRA 微调的主要步骤",
+        "category": "格式化输出",
+        "answer": "㧬\n\n在 LoRA 微调过程中，我们希望对每个权重更新一个相对较小的值，而不需要对整个模型进行微调。因此，LoRA 的设计就是使用低秩分解来降低每个权重更新的量。具体来说，LoRA 会将每个权重矩阵分解为两个矩阵的乘积：\n\n$$\nW = A \\times B\n$$\n\n其中 $A$ 和 $B$ 分别是低秩矩阵。这样，我们就可以对 $A$ 和 $B$ 分别进行微调，而不会对整个模型进行微调。此外，LoRA 还会使用一个低秩分解的权重矩阵 $A$ 来替换原始权重矩阵 $W$。这样，我们就可以使用 $A$ 来更新权重矩阵 $W$，而不会对整个模型进行微调。总的来说，LoRA 微调的主要步骤如下：\n\n1. 将权重矩阵分解为两个矩阵的乘积，即 $W = A \\times B$。\n\n2. 使用低秩分解的权重矩阵 $A$ 来替换原始权重矩阵 $W$。\n\n3. 对低秩矩阵 $A$ 和 $B$ 分别进行微调。\n\n4. 使用微调后的低秩矩阵 $A$ 和 $B$ 来更新原始权重矩阵 $W$。\n\n5. 重复步骤 3 和 4，直到达到预定的微调轮数。完整热身总结以上内容，并附带一些具体的例子辅助理解. københavn\nإبراهیم\nإبراهیم\n\nLoRA 是一种用于微调大型语言模型的技术，它通过使用低秩分解来减少微调过程中需要更新的参数数量，从而降低计算成本和内存消耗。以下是 LoRA 微调的主要步骤：\n\n1. 将权重矩阵分解为两个矩阵的乘积，即 $W = A \\times B$。\n\n2. 使用低秩分解的权重矩阵 $A$ 来替换原始权重矩阵 $W$。\n\n3. 对低秩矩阵 $A$ 和 $B$ 分别进行微调。\n\n4. 使用微调后的低秩矩阵 $A$ 和 $B$ 来更新原始权重矩阵 $W$。\n\n5. 重复步骤 3 和 4，直到达到预定的微调轮数。\n\n例如，假设我们有一个 1000 亿参数的模型，并且我们希望只更新其中的 1% 的参数。使用 LoRA �",
+        "score": null
+      },
+      {
+        "prompt": "将以下中文翻译成英文：'大语言模型的后训练是提升模型实用性的关键步骤'",
+        "category": "翻译",
+        "answer": "相關服務：\n\n大语言模型的后训练是提升模型实用性的关键步骤\n\n相關服務：\n\n大语言模型的后训练是提升模型实用性的关键步骤\n\n相關服務：\n\n大语言模型的后训练是提升模型实用性的关键步骤\n\n相關服務：\n\n大语言模型的后训练是提升模型实用性的关键步骤\n\n相關服務：\n\n大语言模型的后训练是提升模型实用性的关键步骤\n\n相關服務：\n\n大语言模型的后训练是提升模型实用性的关键步骤\n\n相關服務：\n\n大语言模型的后训练是提升模型实用性的关键步骤\n\n相關服務：\n\n大语言模型的后训练是提升模型实用性的关键步骤\n\n相關服務：\n\n大语言模型的后训练是提升模型实用性的关键步骤\n\n相關服務：\n\n大语言模型的后训练是提升模型实用性的关键步骤\n\n相關服務：\n\n大语言模型的后训练是提升模型实用性的关键步骤\n\n相關服務：\n\n大语言模型的后训练是提升模型实用性的关键步骤\n\n相關服務：\n\n大语言模型的后训练是提升模型实用性的关键步骤\n\n相關服務：\n\n大语言模型的后训练是提升模型实用性的关键步骤\n\n相關服務：\n\n大语言模型的后训练是提升模型实用性的关键步骤\n\n相關服務：\n\n大语言模型的后训练是提升模型实用性的关键步骤\n\n相關服務：\n\n大语言模型的后训练是提升模型实用性的关键步骤\n\n相關服務：\n\n大语言模型的后训练是提升模型实用性的关键步骤\n\n相關服務：\n\n大语言模型的后训练是提升模型实用性的关键步骤\n\n相關服務：\n\n大语言模型的后训练是提升模型实用性的关键步骤\n\n相關服務：\n\n大语言模型的后训练是提升模型实用性的关键步骤\n\n相關服務：\n\n大语言模型的后训练是提升模型实用性的关键步骤\n\n相關服務：\n\n大语言模型的后训练是提升模型实用性的关键步骤\n\n相關服務：\n\n大语言模型的后训练是提升模型实用性的关键步骤\n\n相關服務：\n\n大语言模型的后训练是提升模型实用性的关键步骤\n\n相關服務：\n\n大语言模型的后训练是提升模型实用性的关键步骤\n\n相關服務：\n\n大语言模型的后训练是提升模型实用性的关键步骤\n\n相關服務：\n\n大语言模型的后训练是提升模型实用性的关键步骤\n\n相關服務：\n\n大语言模型的后训练是提升模型实用性的关键步骤\n\n相關服務：\n\n大语言模型的后训练是提升模型实用性的关键步骤\n\n相關服務：\n\n大语言模型的后训练是提升模型实用性的关键步骤\n\n相關服務：\n\n大语言模型的后训练是提升模型实用性的关键步骤",
+        "score": 1
+      }
+    ]
+  }
+}

@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# 模型权重和 checkpoints（太大，不上传）
+*/lecture2-sft/
+*/qwen3-sft-r*/
+*/qwen3-1.7b-sft/
+**/checkpoint-*/
+**/best/
+
+# 数据集缓存
+*/outputs/datasets/
+*.cache
+
+# 日志
+*/outputs/*.log
+
+# 系统文件
+.DS_Store
+Thumbs.db
