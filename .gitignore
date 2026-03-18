@@ -10,6 +10,11 @@ __pycache__/
 **/checkpoint-*/
 **/best/
 
+# Lab3: DPO / SimPO 权重
+lab3/dpo-qwen3-1.7b/
+lab3/simpo-qwen3-1.7b/
+lab3/dpo-beta-*/
+
 # 数据集缓存
 */outputs/datasets/
 *.cache

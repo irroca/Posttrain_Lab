@@ -42,6 +42,27 @@ ADAPTERS = {
         "lab2/lecture2-sft/ablation_clean/best",
         "Lab2 ablation: full QC (dedup + filter)",
     ),
+    # ---- Lab 3: DPO & SimPO ----
+    "lab3-dpo": (
+        "lab3/dpo-qwen3-1.7b/final",
+        "Lab3: DPO aligned on UltraFeedback (Qwen3-1.7B, beta=0.1)",
+    ),
+    "lab3-simpo": (
+        "lab3/simpo-qwen3-1.7b/final",
+        "Lab3: SimPO aligned on UltraFeedback (Qwen3-1.7B, beta=2.0, gamma=0.5)",
+    ),
+    "lab3-dpo-beta005": (
+        "lab3/dpo-beta-0.05/checkpoint-250",
+        "Lab3 ablation: DPO beta=0.05",
+    ),
+    "lab3-dpo-beta01": (
+        "lab3/dpo-beta-0.1/checkpoint-250",
+        "Lab3 ablation: DPO beta=0.1",
+    ),
+    "lab3-dpo-beta05": (
+        "lab3/dpo-beta-0.5/checkpoint-250",
+        "Lab3 ablation: DPO beta=0.5",
+    ),
 }
 
 

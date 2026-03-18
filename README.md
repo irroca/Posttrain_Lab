@@ -22,6 +22,15 @@ Posttrain_Lab/
 │   ├── step4_ablation.py
 │   ├── step5_report.py
 │   └── outputs/
+├── lab3/          # 实验3：DPO 对齐与 SimPO 对比
+│   ├── step1_data_explore.py
+│   ├── step2_dpo_train.py
+│   ├── step3_simpo_train.py
+│   ├── step4_evaluate.py
+│   ├── step5_beta_ablation.py
+│   ├── step6_llm_judge.py
+│   ├── step7_report.py
+│   └── outputs/
 └── README.md
 ```
 
@@ -48,6 +57,23 @@ Posttrain_Lab/
   - 完整实验报告与书面反思
 - 详见 [lab2/README.md](lab2/README.md)
 
+### Lab 3：DPO 对齐与 SimPO 对比
+
+- **目标**：掌握偏好对齐（RLHF 替代方案），对比 DPO 与 SimPO
+- **基座模型**：Qwen/Qwen3-1.7B
+- **数据集**：HuggingFaceH4/ultrafeedback_binarized（61,135 条偏好对）
+- **内容**：
+  - DPO 训练（beta=0.1, QLoRA 4-bit, 5000 样本, 1 epoch）
+  - SimPO 训练（beta=2.0, gamma=0.5, 自定义实现）
+  - 三模型对比评估（SFT / DPO / SimPO：有用性、安全性、多样性）
+  - Beta 消融实验（beta=0.05 / 0.1 / 0.5）
+  - LLM-as-Judge 自动评分（Qwen3-max API）
+- **关键结论**：
+  - LLM 评分：SimPO (7.40) > SFT (7.20) > DPO (7.00)
+  - SimPO 显存仅 5.30 GB（vs DPO 44.31 GB），无需参考模型
+  - 三种模型安全拒绝率一致 (90%)，对齐训练未损害安全性
+- 详见 [lab3/outputs/lab3_report.md](lab3/outputs/lab3_report.md)
+
 ## 环境配置
 
 ```bash
@@ -64,6 +90,9 @@ cd lab1 && bash run_all.sh
 
 # Lab 2
 cd lab2 && bash run_all.sh
+
+# Lab 3
+cd lab3 && bash run_all.sh
 ```
 
 ## 预训练权重下载与加载
@@ -98,6 +127,11 @@ tokenizer = AutoTokenizer.from_pretrained("Qwen/Qwen3-1.7B-Base")
 | **lab2-ablation-raw** | Lab2 消融: 原始数据（无清洗） | `model = PeftModel.from_pretrained(base_model, "leixinlin/posttrain-lab-weights", subfolder="lab2-ablation-raw")` |
 | **lab2-ablation-dedup** | Lab2 消融: 仅去重 | `model = PeftModel.from_pretrained(base_model, "leixinlin/posttrain-lab-weights", subfolder="lab2-ablation-dedup")` |
 | **lab2-ablation-clean** | Lab2 消融: 完整 QC（去重+过滤） | `model = PeftModel.from_pretrained(base_model, "leixinlin/posttrain-lab-weights", subfolder="lab2-ablation-clean")` |
+| **lab3-dpo** | Lab3: DPO 对齐 (beta=0.1, UltraFeedback) | `model = PeftModel.from_pretrained(base_model, "leixinlin/posttrain-lab-weights", subfolder="lab3-dpo")` |
+| **lab3-simpo** | Lab3: SimPO 对齐 (beta=2.0, gamma=0.5) | `model = PeftModel.from_pretrained(base_model, "leixinlin/posttrain-lab-weights", subfolder="lab3-simpo")` |
+| **lab3-dpo-beta005** | Lab3 消融: DPO beta=0.05 | `model = PeftModel.from_pretrained(base_model, "leixinlin/posttrain-lab-weights", subfolder="lab3-dpo-beta005")` |
+| **lab3-dpo-beta01** | Lab3 消融: DPO beta=0.1 | `model = PeftModel.from_pretrained(base_model, "leixinlin/posttrain-lab-weights", subfolder="lab3-dpo-beta01")` |
+| **lab3-dpo-beta05** | Lab3 消融: DPO beta=0.5 | `model = PeftModel.from_pretrained(base_model, "leixinlin/posttrain-lab-weights", subfolder="lab3-dpo-beta05")` |
 
 ### 完整加载与推理示例
 
