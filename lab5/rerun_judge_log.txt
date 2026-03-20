@@ -1,0 +1,77 @@
+/home/aiscuser/.local/lib/python3.12/site-packages/torch/cuda/__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+加载 Judge 模型（FP16）...
+[2026-03-20 05:12:57,931] [INFO] [real_accelerator.py:222:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]Loading checkpoint shards:  20%|██        | 1/5 [00:01<00:04,  1.05s/it]Loading checkpoint shards:  40%|████      | 2/5 [00:01<00:02,  1.13it/s]Loading checkpoint shards:  60%|██████    | 3/5 [00:02<00:01,  1.16it/s]Loading checkpoint shards:  80%|████████  | 4/5 [00:03<00:00,  1.27it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:03<00:00,  1.68it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:03<00:00,  1.39it/s]
+/home/aiscuser/.local/lib/python3.12/site-packages/transformers/generation/configuration_utils.py:631: UserWarning: `do_sample` is set to `False`. However, `temperature` is set to `0.6` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `temperature`.
+  warnings.warn(
+/home/aiscuser/.local/lib/python3.12/site-packages/transformers/generation/configuration_utils.py:636: UserWarning: `do_sample` is set to `False`. However, `top_p` is set to `0.95` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `top_p`.
+  warnings.warn(
+/home/aiscuser/.local/lib/python3.12/site-packages/transformers/generation/configuration_utils.py:653: UserWarning: `do_sample` is set to `False`. However, `top_k` is set to `20` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `top_k`.
+  warnings.warn(
+  [gsm8k] Q1 FP16: 7/10
+  [gsm8k] Q1 INT8: 7/10
+  [gsm8k] Q1 INT4: 6/10
+  [gsm8k] Q2 FP16: 6/10
+  [gsm8k] Q2 INT8: 6/10
+  [gsm8k] Q2 INT4: 5/10
+  [gsm8k] Q3 FP16: 7/10
+  [gsm8k] Q3 INT8: 9/10
+  [gsm8k] Q3 INT4: 7/10
+  [gsm8k] Q4 FP16: 8/10
+  [gsm8k] Q4 INT8: 8/10
+  [gsm8k] Q4 INT4: 9/10
+  [gsm8k] Q5 FP16: 8/10
+  [gsm8k] Q5 INT8: 8/10
+  [gsm8k] Q5 INT4: 6/10
+
+gsm8k 评分结果：
+精度         平均分        各题分数
+FP16       7.2        [7, 6, 7, 8, 8]
+INT8       7.6        [7, 6, 9, 8, 8]
+INT4       6.6        [6, 5, 7, 9, 6]
+  [instruction] Q1 FP16: 6/10
+  [instruction] Q1 INT8: 6/10
+  [instruction] Q1 INT4: 6/10
+  [instruction] Q2 FP16: 9/10
+  [instruction] Q2 INT8: 9/10
+  [instruction] Q2 INT4: 9/10
+  [instruction] Q3 FP16: 7/10
+  [instruction] Q3 INT8: 9/10
+  [instruction] Q3 INT4: 7/10
+  [instruction] Q4 FP16: 8/10
+  [instruction] Q4 INT8: 7/10
+  [instruction] Q4 INT4: 8/10
+  [instruction] Q5 FP16: 9/10
+  [instruction] Q5 INT8: 8/10
+  [instruction] Q5 INT4: 8/10
+
+instruction 评分结果：
+精度         平均分        各题分数
+FP16       7.8        [6, 9, 7, 8, 9]
+INT8       7.8        [6, 9, 9, 7, 8]
+INT4       7.6        [6, 9, 7, 8, 8]
+  [chinese] Q1 FP16: 9/10
+  [chinese] Q1 INT8: 9/10
+  [chinese] Q1 INT4: 9/10
+  [chinese] Q2 FP16: 8/10
+  [chinese] Q2 INT8: 8/10
+  [chinese] Q2 INT4: 8/10
+  [chinese] Q3 FP16: 6/10
+  [chinese] Q3 INT8: 5/10
+  [chinese] Q3 INT4: 6/10
+  [chinese] Q4 FP16: 7/10
+  [chinese] Q4 INT8: 8/10
+  [chinese] Q4 INT4: 7/10
+  [chinese] Q5 FP16: 7/10
+  [chinese] Q5 INT8: 7/10
+  [chinese] Q5 INT4: 8/10
+
+chinese 评分结果：
+精度         平均分        各题分数
+FP16       7.4        [9, 8, 6, 7, 7]
+INT8       7.4        [9, 8, 5, 8, 7]
+INT4       7.6        [9, 8, 6, 7, 8]
+
+更新的结果已保存到 /scratch/azureml/cr/j/7e6b762e2e0d44f990d5daffc11d8310/exe/wd/Posttrain_Lab/lab5/experiment_a_results.json
+Judge 评分完成！

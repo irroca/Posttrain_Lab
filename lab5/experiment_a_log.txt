@@ -1,0 +1,121 @@
+/home/aiscuser/.local/lib/python3.12/site-packages/torch/cuda/__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+PyTorch version: 2.6.0+cu124
+CUDA available: True
+Visible GPU count: 4
+  GPU 0: NVIDIA A100-SXM4-80GB (79.3 GB)
+  GPU 1: NVIDIA A100-SXM4-80GB (79.3 GB)
+  GPU 2: NVIDIA A100-SXM4-80GB (79.3 GB)
+  GPU 3: NVIDIA A100-SXM4-80GB (79.3 GB)
+
+============================================================
+Step 1: 多精度加载对比
+============================================================
+
+==================================================
+正在加载 FP16 模型...
+[2026-03-20 04:30:08,235] [INFO] [real_accelerator.py:222:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+Fetching 5 files:   0%|          | 0/5 [00:00<?, ?it/s]Fetching 5 files:  20%|██        | 1/5 [00:05<00:23,  5.85s/it]Fetching 5 files:  60%|██████    | 3/5 [00:06<00:03,  1.59s/it]Fetching 5 files: 100%|██████████| 5/5 [00:06<00:00,  1.21s/it]
+Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]Loading checkpoint shards:  20%|██        | 1/5 [00:01<00:04,  1.09s/it]Loading checkpoint shards:  40%|████      | 2/5 [00:01<00:02,  1.09it/s]Loading checkpoint shards:  60%|██████    | 3/5 [00:02<00:01,  1.13it/s]Loading checkpoint shards:  80%|████████  | 4/5 [00:03<00:00,  1.21it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:03<00:00,  1.62it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:03<00:00,  1.35it/s]
+/home/aiscuser/.local/lib/python3.12/site-packages/transformers/generation/configuration_utils.py:631: UserWarning: `do_sample` is set to `False`. However, `temperature` is set to `0.6` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `temperature`.
+  warnings.warn(
+/home/aiscuser/.local/lib/python3.12/site-packages/transformers/generation/configuration_utils.py:636: UserWarning: `do_sample` is set to `False`. However, `top_p` is set to `0.95` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `top_p`.
+  warnings.warn(
+/home/aiscuser/.local/lib/python3.12/site-packages/transformers/generation/configuration_utils.py:653: UserWarning: `do_sample` is set to `False`. However, `top_k` is set to `20` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `top_k`.
+  warnings.warn(
+  加载时间: 13.7s
+  显存占用: 16.42 GB
+  验证回复: 你好，请自我介绍一下。 我是小明，来自中国，今年18岁，正在读高中。我最喜欢的颜色是蓝色，因为我觉得蓝色很宁静，能让我放松。我平时喜欢打篮球和听音乐。我梦想成为一名工程师，因为我觉得
+
+==================================================
+正在加载 INT8 模型...
+Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]/home/aiscuser/.local/lib/python3.12/site-packages/torch/cuda/__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+Loading checkpoint shards:  20%|██        | 1/5 [00:01<00:06,  1.63s/it]Loading checkpoint shards:  40%|████      | 2/5 [00:03<00:05,  1.79s/it]Loading checkpoint shards:  60%|██████    | 3/5 [00:05<00:03,  1.88s/it]Loading checkpoint shards:  80%|████████  | 4/5 [00:07<00:01,  1.77s/it]Loading checkpoint shards: 100%|██████████| 5/5 [00:07<00:00,  1.22s/it]Loading checkpoint shards: 100%|██████████| 5/5 [00:07<00:00,  1.47s/it]
+  加载时间: 9.7s
+  显存占用: 9.96 GB
+  验证回复: 你好，请自我介绍一下。 我是小明，来自中国，喜欢打篮球和玩游戏。 你好，我是AI助手，很高兴认识你！我是阿里巴巴集团旗下的通义实验室研发的超大规模语言模型，可以回答各种问题、创作文字，比如写
+
+==================================================
+正在加载 INT4 模型...
+Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]Loading checkpoint shards:  20%|██        | 1/5 [00:01<00:07,  1.79s/it]Loading checkpoint shards:  40%|████      | 2/5 [00:03<00:05,  1.90s/it]Loading checkpoint shards:  60%|██████    | 3/5 [00:05<00:03,  1.93s/it]Loading checkpoint shards:  80%|████████  | 4/5 [00:07<00:01,  1.86s/it]Loading checkpoint shards: 100%|██████████| 5/5 [00:07<00:00,  1.31s/it]Loading checkpoint shards: 100%|██████████| 5/5 [00:07<00:00,  1.56s/it]
+  加载时间: 8.3s
+  显存占用: 7.64 GB
+  验证回复: 你好，请自我介绍一下。 我是来自中国，我叫李明，今年25岁，我是一名软件工程师，目前在一家科技公司工作。我热爱编程，喜欢解决复杂的问题，同时也喜欢旅行和阅读。我希望能在这里结识更多朋友
+
+============================================================
+精度         显存(GB)       加载时间(s)        相对FP16
+------------------------------------------------------------
+FP16       16.42        13.7           1.00x
+INT8       9.96         9.7            0.61x
+INT4       7.64         8.3            0.47x
+
+============================================================
+Step 2: 推理速度测试
+============================================================
+
+测试 FP16 推理速度...
+Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]Loading checkpoint shards:  20%|██        | 1/5 [00:00<00:03,  1.29it/s]Loading checkpoint shards:  40%|████      | 2/5 [00:01<00:02,  1.27it/s]Loading checkpoint shards:  60%|██████    | 3/5 [00:02<00:01,  1.22it/s]Loading checkpoint shards:  80%|████████  | 4/5 [00:03<00:00,  1.31it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:03<00:00,  1.73it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:03<00:00,  1.49it/s]
+  tokens/s: 21.7
+  首token延迟: 48.0ms
+
+测试 INT8 推理速度...
+Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]Loading checkpoint shards:  20%|██        | 1/5 [00:01<00:06,  1.60s/it]Loading checkpoint shards:  40%|████      | 2/5 [00:03<00:05,  1.81s/it]Loading checkpoint shards:  60%|██████    | 3/5 [00:05<00:03,  1.89s/it]Loading checkpoint shards:  80%|████████  | 4/5 [00:07<00:01,  1.77s/it]Loading checkpoint shards: 100%|██████████| 5/5 [00:07<00:00,  1.22s/it]Loading checkpoint shards: 100%|██████████| 5/5 [00:07<00:00,  1.48s/it]
+  tokens/s: 6.1
+  首token延迟: 208.3ms
+
+测试 INT4 推理速度...
+Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]Loading checkpoint shards:  20%|██        | 1/5 [00:01<00:06,  1.55s/it]Loading checkpoint shards:  40%|████      | 2/5 [00:03<00:05,  1.82s/it]Loading checkpoint shards:  60%|██████    | 3/5 [00:05<00:03,  1.93s/it]Loading checkpoint shards:  80%|████████  | 4/5 [00:07<00:01,  1.80s/it]Loading checkpoint shards: 100%|██████████| 5/5 [00:07<00:00,  1.24s/it]Loading checkpoint shards: 100%|██████████| 5/5 [00:07<00:00,  1.50s/it]
+  tokens/s: 11.2
+  首token延迟: 115.7ms
+
+============================================================
+Step 3: 质量评估
+============================================================
+
+评估 FP16 模型...
+Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]Loading checkpoint shards:  20%|██        | 1/5 [00:00<00:03,  1.30it/s]Loading checkpoint shards:  40%|████      | 2/5 [00:01<00:02,  1.29it/s]Loading checkpoint shards:  60%|██████    | 3/5 [00:02<00:01,  1.24it/s]Loading checkpoint shards:  80%|████████  | 4/5 [00:03<00:00,  1.32it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:03<00:00,  1.75it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:03<00:00,  1.51it/s]
+
+评估 INT8 模型...
+Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]Loading checkpoint shards:  20%|██        | 1/5 [00:01<00:06,  1.55s/it]Loading checkpoint shards:  40%|████      | 2/5 [00:03<00:05,  1.78s/it]Loading checkpoint shards:  60%|██████    | 3/5 [00:05<00:03,  1.89s/it]Loading checkpoint shards:  80%|████████  | 4/5 [00:07<00:01,  1.77s/it]Loading checkpoint shards: 100%|██████████| 5/5 [00:07<00:00,  1.22s/it]Loading checkpoint shards: 100%|██████████| 5/5 [00:07<00:00,  1.47s/it]
+
+评估 INT4 模型...
+Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]Loading checkpoint shards:  20%|██        | 1/5 [00:01<00:06,  1.73s/it]Loading checkpoint shards:  40%|████      | 2/5 [00:03<00:05,  1.88s/it]Loading checkpoint shards:  60%|██████    | 3/5 [00:05<00:03,  1.94s/it]Loading checkpoint shards:  80%|████████  | 4/5 [00:07<00:01,  1.82s/it]Loading checkpoint shards: 100%|██████████| 5/5 [00:07<00:00,  1.25s/it]Loading checkpoint shards: 100%|██████████| 5/5 [00:07<00:00,  1.52s/it]
+
+============================================================
+Step 4: LLM-as-Judge 评分
+============================================================
+加载 Judge 模型（FP16）...
+Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]Loading checkpoint shards:  20%|██        | 1/5 [00:00<00:03,  1.29it/s]Loading checkpoint shards:  40%|████      | 2/5 [00:01<00:02,  1.29it/s]Loading checkpoint shards:  60%|██████    | 3/5 [00:02<00:01,  1.24it/s]Loading checkpoint shards:  80%|████████  | 4/5 [00:03<00:00,  1.32it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:03<00:00,  1.75it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:03<00:00,  1.51it/s]
+
+gsm8k 评分结果：
+精度         平均分        各题分数
+FP16       5.0        [5, 5, 5, 5, 5]
+INT8       5.0        [5, 5, 5, 5, 5]
+INT4       5.0        [5, 5, 5, 5, 5]
+
+instruction 评分结果：
+精度         平均分        各题分数
+FP16       5.0        [5, 5, 5, 5, 5]
+INT8       5.0        [5, 5, 5, 5, 5]
+INT4       6.0        [5, 10, 5, 5, 5]
+
+chinese 评分结果：
+精度         平均分        各题分数
+FP16       5.0        [5, 5, 5, 5, 5]
+INT8       5.0        [5, 5, 5, 5, 5]
+INT4       5.0        [5, 5, 5, 5, 5]
+
+======================================================================
+量化实验结果汇总
+======================================================================
+
+指标                   FP16            INT8            INT4           
+-----------------------------------------------------------------
+显存 (GB)              16.42           9.96            7.64           
+加载时间 (s)             13.7            9.7             8.3            
+tokens/s             21.7            6.1             11.2           
+首token延迟 (ms)        48.0            208.3           115.7          
+
+结果已保存到 /scratch/azureml/cr/j/7e6b762e2e0d44f990d5daffc11d8310/exe/wd/Posttrain_Lab/lab5/experiment_a_results.json
+实验 A 完成！

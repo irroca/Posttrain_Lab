@@ -23,6 +23,12 @@ lab4/outputs/grpo-format-reward/final/
 lab4/outputs/ablation/*/checkpoint-*/
 # 保留 training_log.json / ablation_summary.json 等小文件
 
+# Lab5: 量化 + 多模态实验
+lab5/test_images/
+lab5/experiment_a_results.json
+lab5/experiment_b_vlm_results.json
+lab5/experiment_b_multimodal_v1.py
+
 # 数据集缓存
 */outputs/datasets/
 *.cache

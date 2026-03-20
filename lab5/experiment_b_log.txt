@@ -1,0 +1,158 @@
+/home/aiscuser/.local/lib/python3.12/site-packages/torch/cuda/__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+[2026-03-20 05:24:30,928] [INFO] [real_accelerator.py:222:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+============================================================
+实验 B 选项 2：迷你多模态实验
+============================================================
+
+加载 Qwen2.5-VL-7B-Instruct 模型...
+Fetching 5 files:   0%|          | 0/5 [00:00<?, ?it/s]Fetching 5 files:  20%|██        | 1/5 [00:05<00:22,  5.70s/it]Fetching 5 files:  60%|██████    | 3/5 [00:05<00:03,  1.58s/it]Fetching 5 files: 100%|██████████| 5/5 [00:05<00:00,  1.20s/it]
+Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]Loading checkpoint shards:  20%|██        | 1/5 [00:00<00:03,  1.03it/s]Loading checkpoint shards:  40%|████      | 2/5 [00:01<00:02,  1.22it/s]Loading checkpoint shards:  60%|██████    | 3/5 [00:02<00:01,  1.21it/s]Loading checkpoint shards:  80%|████████  | 4/5 [00:03<00:00,  1.26it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:03<00:00,  1.73it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:03<00:00,  1.45it/s]
+Using a slow image processor as `use_fast` is unset and a slow processor was saved with this model. `use_fast=True` will be the default behavior in v4.52, even if the model was saved with a slow processor. This will result in minor differences in outputs. You'll still be able to use a slow processor with `use_fast=False`.
+/home/aiscuser/.local/lib/python3.12/site-packages/transformers/generation/configuration_utils.py:631: UserWarning: `do_sample` is set to `False`. However, `temperature` is set to `1e-06` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `temperature`.
+  warnings.warn(
+模型参数量: 8.29B
+加载时间: 15.5s
+显存占用: 15.45 GB
+
+============================================================
+Step 2: 视觉问答测试
+============================================================
+
+--- VQA 任务 1/10 ---
+问题: 这张图片中有哪些形状？它们分别是什么颜色？
+预期答案: 红色矩形、蓝色圆形、绿色三角形
+模型回复: 这张图片中有三种不同的形状。它们分别是：
+
+1. 一个红色的矩形。
+2. 一个蓝色的圆形。
+3. 一个绿色的三角形。
+
+--- VQA 任务 2/10 ---
+问题: 图片中一共有多少个形状？
+预期答案: 3个
+模型回复: 图片中有三个不同的形状：一个红色的正方形、一个蓝色的圆形和一个绿色的三角形。因此，图片中一共有3个形状。
+
+--- VQA 任务 3/10 ---
+问题: 图片中显示的数学题的答案是什么？
+预期答案: 5
+模型回复: 图片中的数学题是2 + 3 = ?，答案是5。
+
+--- VQA 任务 4/10 ---
+问题: 这个柱状图中哪个柱子最高？
+预期答案: B
+模型回复: 在这个柱状图中，最高的柱子是B。
+
+--- VQA 任务 5/10 ---
+问题: 图中一共有几个柱子？
+预期答案: 4个
+模型回复: 图中有四个柱子。
+
+--- VQA 任务 6/10 ---
+问题: 请描述这张图片中有哪些物体？
+预期答案: 房子、树、太阳、绿色草地
+模型回复: 这张图片中有以下物体：
+
+1. 一座房子，屋顶是红色的三角形，墙壁是红色的矩形。
+2. 一棵树，树冠是绿色的圆形，树干是棕色的。
+3. 太阳，位于图片的右上角，是一个黄色的圆形。
+4. 背景是浅蓝色的天空和绿色的地面。
+
+--- VQA 任务 7/10 ---
+问题: 图片中的天空是什么颜色的？
+预期答案: 浅蓝色
+模型回复: 图片中的天空是浅蓝色的。
+
+--- VQA 任务 8/10 ---
+问题: 这个钟表显示的时间是几点？
+预期答案: 3点/3:00
+模型回复: 这个钟表显示的时间是3点。
+
+--- VQA 任务 9/10 ---
+问题: 图片中有紫色的形状吗？
+预期答案: 没有
+模型回复: 没有，图片中没有紫色的形状。图片中有红色的矩形、蓝色的圆形和绿色的三角形。
+
+--- VQA 任务 10/10 ---
+问题: 图片中有几只鸟？
+预期答案: 没有鸟
+模型回复: 图片中没有鸟。
+
+============================================================
+Step 3: 幻觉率统计与分析
+============================================================
+
+--- 幻觉测试 1/8 ---
+问题: 图片中有几只猫？请描述它们。
+真实答案: 图片中没有猫
+模型回复: 图片中没有猫。图片中有三个几何图形：一个红色的正方形、一个蓝色的圆形和一个绿色的三角形。
+是否产生幻觉: 否
+
+--- 幻觉测试 2/8 ---
+问题: 图片中紫色的星形在什么位置？
+真实答案: 图片中没有紫色星形
+模型回复: 对不起，您可能误解了。在您提供的图片中，并没有紫色的星形。图片中有一个红色的正方形、一个蓝色的圆形和一个绿色的三角形。如果您有关于这些形状的问题，我会很乐意帮助您解答。
+是否产生幻觉: 否
+
+--- 幻觉测试 3/8 ---
+问题: 图片中有几辆汽车？
+真实答案: 图片中没有汽车
+模型回复: 图片中没有汽车。
+是否产生幻觉: 否
+
+--- 幻觉测试 4/8 ---
+问题: 图片中有几朵云？请描述云的形状。
+真实答案: 图片中没有云
+模型回复: 这张图片中没有云。
+是否产生幻觉: 否
+
+--- 幻觉测试 5/8 ---
+问题: 钟表上的秒针指向什么位置？
+真实答案: 图片中的钟没有秒针
+模型回复: 在这张图片中，钟表上没有显示秒针的位置。图片中的钟表只有时针和分针，秒针的位置无法确定。
+是否产生幻觉: 否
+
+--- 幻觉测试 6/8 ---
+问题: 图片中的数学题下面写了什么文字？
+真实答案: 图片中数学题下面没有文字
+模型回复: 图片中的数学题是“2 + 3 = ?”，下面没有写其他文字。
+是否产生幻觉: 否
+
+--- 幻觉测试 7/8 ---
+问题: 柱状图的标题是什么？
+真实答案: 柱状图没有标题
+模型回复: 图片中没有显示柱状图的标题。
+是否产生幻觉: 否
+
+--- 幻觉测试 8/8 ---
+问题: 图片中有几个人？
+真实答案: 图片中没有人
+模型回复: 这张图片中没有显示任何人物。图片展示了一座房子、一棵树和一个太阳，但没有人物出现。
+是否产生幻觉: 否
+
+============================================================
+幻觉率统计结果
+============================================================
+总测试数: 8
+产生幻觉数: 0
+幻觉率: 0.0%
+
+============================================================
+Step 4: VQA 准确率统计
+============================================================
+
+类别                        正确数        总数         准确率
+------------------------------------------------------------
+object_recognition        0          1          0.0%
+counting                  1          2          50.0%
+math_ocr                  1          1          100.0%
+chart_understanding       1          1          100.0%
+scene_description         1          1          100.0%
+color_recognition         1          1          100.0%
+time_reading              0          1          0.0%
+hallucination_test        2          2          100.0%
+总计                        7          10         70.0%
+
+结果已保存到 /scratch/azureml/cr/j/7e6b762e2e0d44f990d5daffc11d8310/exe/wd/Posttrain_Lab/lab5/experiment_b_vlm_results.json
+
+实验 B（多模态实验）完成！

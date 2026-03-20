@@ -39,6 +39,15 @@ Posttrain_Lab/
 │   ├── generate_deliverables.py
 │   ├── run_all.sh
 │   └── outputs/
+├── lab5/          # 实验5：量化实验 + 迷你多模态实验
+│   ├── experiment_a_quantization.py
+│   ├── experiment_b_multimodal.py
+│   ├── rerun_judge.py
+│   ├── generate_report.py
+│   ├── run_all.sh
+│   ├── test_images/
+│   ├── figures/
+│   └── lab5_report.md
 └── README.md
 ```
 
@@ -101,6 +110,31 @@ Posttrain_Lab/
   - GRPO 的推理风格是"自发探索"的，与蒸馏模型"模仿教师"的风格形成对比
 - 详见 [lab4/outputs/deliverables/lab4_report.md](lab4/outputs/deliverables/lab4_report.md)
 
+### Lab 5：量化实验 + 迷你多模态实验
+
+- **目标**：掌握模型量化技术（FP16/INT8/INT4）对显存、速度、质量的影响，并体验多模态 VLM 的视觉理解能力
+- **实验 A（必做）— 量化实验**：
+  - **模型**：Qwen/Qwen3-8B
+  - **量化方案**：FP16（原始）/ INT8（bitsandbytes）/ INT4（NF4 + Double Quantization）
+  - **评估维度**：显存占用、推理速度（tokens/s + 首token延迟）、LLM-as-Judge 质量评分（GSM8K / 指令跟随 / 中文任务）
+  - **关键结论**：
+    - INT4 比 FP16 节省 53.5% 显存（16.42 GB → 7.64 GB），质量保持率 > 95%
+    - 数学推理任务受量化影响最大（FP16 7.2 → INT4 6.6）
+    - INT8 是速度与质量的最佳平衡点
+- **实验 B（选做）— 迷你多模态实验（增强版）**：
+  - **模型**：Qwen/Qwen2.5-VL-7B-Instruct (8.29B)
+  - **测试图像**：10 张合成图像（几何形状、数学题、柱状图、场景图、钟表、空间布局、表格、对比面板、会议记录、抽象图案）
+  - **评估维度**：8 大类 25 个 VQA 任务 + 3 组多轮视觉对话
+    - 物体识别与计数、OCR 文字识别、图表数据理解、空间推理
+    - 时间读取、对比与视觉推理、幻觉检测（缺失物体）、幻觉检测（错误归因）
+  - **关键结论**：
+    - 总体准确率 84.0%（21/25），平均推理延迟 2072ms
+    - 物体识别、OCR、空间推理、错误归因检测 100% 准确
+    - 幻觉率 20.0%（2/10），主要出在诱导性问题（假设不存在的元素存在）
+    - 图表理解中的多步数值计算是主要弱项（加法求和出错）
+    - 多轮对话中保持良好的上下文一致性
+- 详见 [lab5/lab5_report.md](lab5/lab5_report.md)
+
 ## 环境配置
 
 ```bash
@@ -123,6 +157,9 @@ cd lab3 && bash run_all.sh
 
 # Lab 4
 cd lab4 && bash run_all.sh
+
+# Lab 5
+cd lab5 && bash run_all.sh
 ```
 
 ## 预训练权重下载与加载
