@@ -10,6 +10,19 @@ __pycache__/
 **/checkpoint-*/
 **/best/
 
+# Lab3: DPO / SimPO 权重
+lab3/dpo-qwen3-1.7b/
+lab3/simpo-qwen3-1.7b/
+lab3/dpo-beta-*/
+
+# Lab4: GRPO 完整模型权重和 checkpoints
+lab4/outputs/grpo-qwen3-1.7b-math/checkpoint-*/
+lab4/outputs/grpo-qwen3-1.7b-math/final/
+lab4/outputs/grpo-format-reward/checkpoint-*/
+lab4/outputs/grpo-format-reward/final/
+lab4/outputs/ablation/*/checkpoint-*/
+# 保留 training_log.json / ablation_summary.json 等小文件
+
 # 数据集缓存
 */outputs/datasets/
 *.cache

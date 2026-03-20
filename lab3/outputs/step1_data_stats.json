@@ -1,0 +1,9 @@
+{
+  "dataset_size": 61135,
+  "chosen_mean_len": 198.33798969493742,
+  "chosen_median_len": 158.0,
+  "rejected_mean_len": 175.48172078187616,
+  "rejected_median_len": 130.0,
+  "length_ratio": 1.1302487165684432,
+  "length_bias_warning": false
+}

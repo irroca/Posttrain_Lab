@@ -1,0 +1,30 @@
+{
+  "Base": {
+    "step_by_step": "45/50",
+    "self_check": "1/50",
+    "backtrack": "0/50",
+    "structured": "46/50",
+    "math_symbols": "50/50"
+  },
+  "GRPO": {
+    "step_by_step": "48/50",
+    "self_check": "0/50",
+    "backtrack": "0/50",
+    "structured": "31/50",
+    "math_symbols": "44/50"
+  },
+  "Distill": {
+    "step_by_step": "50/50",
+    "self_check": "46/50",
+    "backtrack": "47/50",
+    "structured": "49/50",
+    "math_symbols": "49/50"
+  },
+  "Instruct-Think": {
+    "step_by_step": "50/50",
+    "self_check": "50/50",
+    "backtrack": "49/50",
+    "structured": "50/50",
+    "math_symbols": "47/50"
+  }
+}
